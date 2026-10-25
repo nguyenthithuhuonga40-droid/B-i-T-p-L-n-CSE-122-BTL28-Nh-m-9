@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourtConnect - Giao lưu Nhịp Sân</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dieuphoi.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">CLB Nhịp Sân</div>
+            <nav class="danh-sach-menu">
+                <a href="index1.html" class="muc-menu" data-muc="su-kien">Sự kiện</a>
+                <a href="chitiet.html" class="muc-menu kich-hoat" data-muc="chi-tiet" aria-current="page">Chi tiết</a>
+                <a href="thanhvien.html" class="muc-menu" data-muc="danh-sach-thanh-vien">Danh sách thành viên</a>
+                <a href="xepdoi.html" class="muc-menu" data-muc="xep-doi">Xếp đội</a>
+                <a href="#" class="muc-menu" data-muc="thong-bao">Thông báo</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-demo-data">Dữ liệu minh họa • 10/2026</div>
+                <a href="#" class="sidebar-help">Trợ giúp & phản hồi <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i></a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-path">Điều phối CLB <span class="separator">/</span> CourtConnect</div>
+                <div class="header-right">
+                    <div class="user-dropdown">
+                        Điều phối CLB - Thu Hường <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="notification-bell">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                </div>
+            </header>
+            <div class="content-header-row">
+                <div class="title-group">
+                    <h1>Giao lưu Nhịp Sân </h1>
+                    <p>Sự kiện EV-1010 • Thứ bảy 10/10/2026 • CLB Nhịp Sân</p>
+                </div>
+                <button class="btn-view-img" id="btnViewTeam">Xem đội hình <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            </div>
+            <div class="dashboard-grid">
+                <section class="card form-section">
+                    <div class="card-title">Chi tiết / biểu mẫu chính sửa</div>
+                    <form id="eventForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Tên sự kiện *</label>
+                                <input id="tenSuKienChiTiet" type="text" value="Giao lưu Nhịp Sân ">
+                            </div>
+                            <div class="form-group">
+                                <label>Môn thể thao *</label>
+                                <input id="monSuKienChiTiet" type="text" value="Pickleball">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Địa điểm *</label>
+                                <input id="diaDiemChiTiet" type="text" value="Tây Hồ Sports - P03 & P04">
+                            </div>
+                            <div class="form-group">
+                                <label>Lịch *</label>
+                                <input id="lichSuKienChiTiet" type="text" value="10/10/2026 - 18:00–20:00">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Sức chứa *</label>
+                                <input id="sucChuaChiTiet" type="text" value="8 người">
+                            </div>
+                            <div class="form-group">
+                                <label>Trình độ *</label>
+                                <input id="trinhDoChiTiet" type="text" value="3.0–3.5 - Trung cấp">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Luật & nội dung</label>
+                            <textarea id="luatSuKienChiTiet" rows="2">2 đội luân phiên đánh đôi. Mỗi ván 11 điểm. Đổi cặp sau từng ván để giao lưu.</textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Ghi chú cho thành viên</label>
+                            <textarea id="ghiChuSuKienChiTiet" rows="2">Đến trước 10 phút; tự mang vợt và nước uống.</textarea>
+                        </div>
+                        <div class="form-notice">
+                            Kiểm tra: đủ sân đã xác nhận, số người 4–16 và kết thúc sau bắt đầu. Không giảm sức chứa dưới số đăng ký.
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-dark" id="btnSave">Lưu thay đổi</button>
+                            <button type="button" class="btn btn-outline" id="btnDraft">Lưu nháp sự kiện mới</button>
+                        </div>
+                    </form>
+                </section>
+                <section class="card status-section">
+                    <div class="card-title">Ngân sách & trạng thái</div>
+                    <div class="badge-status">
+                        <span class="dot"></span> Đã công bố
+                    </div>
+                    <div class="budget-info">
+                        <p class="sub-text">Đơn sân: CC-1009 - Đã xác nhận</p>
+                        <div class="budget-row">
+                            <span>2 sân × 2 giờ</span>
+                            <span class="price">720.000đ</span>
+                        </div>
+                        <div class="budget-row">
+                            <span>Phụ phí</span>
+                            <span>0đ</span>
+                        </div>
+                    </div>
+                    <div class="price-highlight">
+                        <h2>90.000đ / người</h2>
+                        <p>Chia đều cho 8 người • Ngân sách minh họa</p>
+                    </div>
+                    <div class="status-actions">
+                        <button class="btn btn-light-outline" id="btnPublish">Công bố sự kiện</button>
+                        <button class="btn btn-danger-outline" id="btnCancelEvent">Hủy sự kiện</button>
+                    </div>
+                    <div class="capacity-notice">
+                        Đã đủ 8/8 người. Người mới được đưa vào danh sách chờ, không tự tăng sức chứa.
+                    </div>
+                </section>
+            </div>
+            <section class="card table-section">
+                <div class="table-responsive">
+                    <table class="registrants-table">
+                        <thead>
+                            <tr>
+                                <th>Người đăng ký</th>
+                                <th>Trình độ</th>
+                                <th>Thời gian phản hồi</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody id="registrantsList">
+                            <tr>
+                                <td>Lan Phương</td>
+                                <td>3.5</td>
+                                <td>08/10 - 09:00</td>
+                                <td><span class="status-tag">Đã xác nhận</span></td>
+                            </tr>
+                            <tr>
+                                <td>Đức Huy</td>
+                                <td>3.0</td>
+                                <td>08/10 - 09:10</td>
+                                <td><span class="status-tag">Đã xác nhận</span></td>
+                            </tr>
+                            <tr>
+                                <td>Thu Hà</td>
+                                <td>3.0</td>
+                                <td>08/10 - 08:25</td>
+                                <td><span class="status-tag">Đã xác nhận</span></td>
+                            </tr>
+                            <tr>
+                                <td>Quốc Bảo</td>
+                                <td>3.5</td>
+                                <td>08/10 - 10:00</td>
+                                <td><span class="status-tag">Đã xác nhận</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mai Linh</td>
+                                <td>3.0</td>
+                                <td>08/10 - 10:30</td>
+                                <td><span class="status-tag">Đã xác nhận</span></td>
+                            </tr>
+                            <tr>
+                                <td>Hoàng Long</td>
+                                <td>3.5</td>
+                                <td>08/10 - 11:00</td>
+                                <td><span class="status-tag">Đã xác nhận</span></td>
+                            </tr>
+                            <tr>
+                                <td>Ngọc Mai</td>
+                                <td>3.0</td>
+                                <td>08/10 - 12:00</td>
+                                <td><span class="status-tag">Đã xác nhận</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tuấn Anh</td>
+                                <td>3.5</td>
+                                <td>08/10 - 12:30</td>
+                                <td><span class="status-tag">Đã xác nhận</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    Hiển thị 8 bản ghi minh họa • Trang 1
+                </div>
+            </section>
+            <div class="bottom-grid">
+                <div class="card">
+                    <div class="card-title">Xác nhận công bố</div>
+                    <p class="desc-text">Gửi thông báo cho thành viên CLB và mở đăng ký?</p>
+                    <div class="form-actions">
+                        <button class="btn btn-dark" id="btnConfirmPublish">Công bố</button>
+                        <button class="btn btn-outline" id="btnEditAgain">Quay lại sửa</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Xác nhận hủy</div>
+                    <div class="form-group full-width">
+                        <label>Lý do hủy *</label>
+                        <input type="text" id="cancelReason" value="Thời tiết không phù hợp">
+                    </div>
+                    <p class="desc-text-small">Báo cho 8 người đăng ký; xử lý đơn riêng với chủ sân.</p>
+                    <div class="form-actions">
+                        <button class="btn btn-danger" id="btnConfirmCancel">Xác nhận hủy</button>
+                        <button class="btn btn-outline" id="btnKeepEvent">Giữ sự kiện</button>
+                    </div>
+                </div>
+            </div>
+            <footer class="app-footer">
+                Thiết kế minh họa • CourtConnect • Hà Nội • Không thực hiện giao dịch thật.
+            </footer>
+        </main>
+    </div>
+   <div id="thongBaoTrang" class="thong-bao-trang" role="status" aria-live="polite"></div>
+   <script src="duLieuCLB.js"></script>
+   <script src="script.js"></script>
+   <script src="dieuphoi.js"></script>
+</body>
+</html>
