@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourtConnect - Xếp đội & Team Balancer</title>
+    <link rel="stylesheet" href="xepdoi.css">
+</head>
+<body class="trang-web">
+
+    <!-- Thanh điều hướng trên cùng -->
+    <header class="thanh-dieu-huong-tren">
+        <div class="logo-hang">
+            <span class="bieu-tuong-logo">☵</span>
+            <span class="ten-thuong-hieu">CourtConnect</span>
+        </div>
+        <div class="menu-nguoi-dung">
+            <span class="chu-menu">Điều phối CLB</span>
+            <span class="dau-cham">•</span>
+            <button class="nut-dieu-huong-nguoi-dung" id="nutNguoiDung">
+                Lan Phương <span class="mui-ten">∨</span>
+            </button>
+            <button class="nut-thong-bao" id="nutThongBaoTop" title="Thông báo">🔔</button>
+        </div>
+    </header>
+
+    <div class="bo-boc-chinh">
+        <!-- Thanh bên trái -->
+        <aside class="thanh-ben">
+            <h2 class="tieu-de-clb">CLB Nhịp Sân</h2>
+            <nav class="danh-sach-menu">
+               <a href="index1.html" class="muc-menu" id="menuSuKien">Sự kiện</a>
+                <a href="thanhvien.html" class="muc-menu" id="menuThanhVien">Danh sách thành viên</a>
+                <a href="xepdoi.html" class="muc-menu dang-chon" id="menuXepDoi">Xếp đội</a>
+                <a href="#" class="muc-menu" id="menuThongBao">Thông báo</a>
+            </nav>
+            <div class="khu-vuc-duoi-thanh-ben">
+                <div class="dong-du-lieu-mau">Dữ liệu minh họa • 10/2026</div>
+                <a href="#" class="lien-ket-tro-giup" id="menuTroGiup">Trợ giúp & phản hồi ↗</a>
+            </div>
+        </aside>
+
+        <!-- Nội dung chính -->
+        <main class="noi-dung-chinh">
+            
+            <!-- Đường dẫn & Tiêu đề -->
+            <div class="thanh-duong-dan">ĐIỀU PHỐI CLB / COURTCONNECT</div>
+            
+            <div class="hang-tieu-de-chinh">
+                <div class="khoi-tieu-de">
+                    <h1 class="tieu-de-trang">Hai đội cân bằng. Một cuộc chơi hay.</h1>
+                    <p class="mo-ta-trang">EV-1010 • Giao lưu Nhịp Sân thứ bảy • 10/10 • 18:00–20:00</p>
+                </div>
+                <div class="nhom-nut-phai-tieu-de">
+                    <button class="nut-cong-bo-doi-hinh" id="nutCongBoDoiHinh">Công bố đội hình</button>
+                    <span class="nhan-ban-nhap">⚠️ Bản nháp - Chưa công bố</span>
+                </div>
+            </div>
+
+            <!-- Hàng bộ lọc sự kiện -->
+            <section class="bo-loc-su-kien">
+                <div class="o-nhap-bo-loc">
+                    <label class="nhan-o-nhap">Sự kiện</label>
+                    <select id="chonSuKien" class="truong-nhap truong-chon">
+                        <option value="giao-luu" selected>Giao lưu Nhịp Sân thứ bảy</option>
+                        <option value="giai-noi-bo">Giải nội bộ CLB</option>
+                    </select>
+                </div>
+                <div class="o-nhap-bo-loc">
+                    <label class="nhan-o-nhap">Người được chọn</label>
+                    <input type="text" id="nguoiDuocChon" value="8/8 đã xác nhận" readonly class="truong-nhap">
+                </div>
+            </section>
+
+            <!-- Khu vực chính chứa danh sách chọn thành viên và 2 đội hình -->
+            <div class="khu-vuc-chia-doi">
+                
+                <!-- Cột chọn thành viên bên trái -->
+                <section class="the-chon-thanh-vien">
+                    <h3 class="tieu-de-the">Chọn thành viên</h3>
+                    <p class="huong-dan-chon">Chỉ chọn đăng ký đã xác nhận.</p>
+                    
+                    <div class="danh-sach-checkbox" id="danhSachCheckboxThanhVien">
+                        <!-- Render bằng JS -->
+                    </div>
+
+                    <button class="nut-chon-tat-ca" id="nutChonTatCa">Chọn tất cả 8 người</button>
+                    <p class="ghi-chu-duoi-chon">Minh Anh đang chờ lời mời, chưa đưa vào đội.</p>
+                </section>
+
+                <!-- Cột Đội hình đề xuất bên phải -->
+                <section class="the-doi-hinh-de-xuat">
+                    <div class="tieu-de-hang-doi">
+                        <h3 class="tieu-de-the-trang">Đội hình đề xuất</h3>
+                        <span the-loai="nhan-so-luong" class="nhan-so-luong-doi">2 đội • 4 người</span>
+                    </div>
+
+                    <div class="khu-vuc-hai-doi">
+                        <!-- Đội A -->
+                        <div class="khung-doi">
+                            <h4 class="ten-doi">Đội A</h4>
+                            <p class="thong-ke-diem">Tổng điểm 13.0 • Trung bình 3.25</p>
+                            <div class="danh-sach-thanh-vien-doi" id="danhSachDoiA">
+                                <!-- Render bằng JS -->
+                            </div>
+                        </div>
+
+                        <!-- Đội B -->
+                        <div class="khung-doi">
+                            <h4 class="ten-doi">Đội B</h4>
+                            <p class="thong-ke-diem">Tổng điểm 13.0 • Trung bình 3.25</p>
+                            <div class="danh-sach-thanh-vien-doi" id="danhSachDoiB">
+                                <!-- Render bằng JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="chenh-lech-ghi-chu">Chênh lệch tổng điểm: 0.0 • Đây là đội hình giao lưu, luân phiên cặp đánh đôi.</p>
+                    <button class="nut-doi-nguoi" id="nutDoiNguoiHaDoi">🔄 Đổi người giữa hai đội</button>
+                </section>
+
+            </div>
+
+            <!-- Khối Team Balancer ở dưới -->
+            <section class="the-team-balancer">
+                <div class="hang-tieu-de-balancer">
+                    <div class="tieu-de-voi-bieu-tuong">
+                        <span class="bieu-tuong-kim-cuong">❖</span>
+                        <h3 class="tieu-de-the">Team Balancer</h3>
+                    </div>
+                    <div class="nhan-trang-thai-ai">
+                        <span class="badge-ai">AI mô phỏng</span>
+                    </div>
+                </div>
+
+                <div class="noi-dung-balancer-chi-tiet">
+                    <div class="cot-thong-tin-ai">
+                        <h4 class="tieu-de-de-xuat-ai">Đề xuất cân bằng từ 8 thành viên</h4>
+                        <p class="mo-ta-ai">Mỗi đội có 2 người 3.5 và i2 người 3.0. Hai đội cùng tổng điểm 13.0.<br>Ưu tiên cùng lịch rảnh và luân phiên cặp; không xếp theo giới tính hay thuộc tính nhạy cảm.<br><span class="chu-mo-nho">Điểm số tự đánh giá, tính toán minh họa. Khả năng phối hợp thực tế có thể khác.</span></p>
+                        
+                        <div class="danh-sach-nut-balancer">
+                            <button class="nut-chap-nhan" id="nutChapNhanDoiHinh">Chấp nhận đội hình</button>
+                            <button class="nut-phu" id="nutSuaThuCong">Sửa thủ công</button>
+                            <button class="nut-phu" id="nutTuChoi">Từ chối</button>
+                            <button class="nut-phu" id="nutTaoLai">Tạo lại</button>
+                            <button class="nut-phu" id="nutLuuNhap">Lưu nháp</button>
+                        </div>
+                    </div>
+
+                    <div class="cot-trang-thai-ben-phai">
+                        <span class="badge-duyet">AI mô phỏng - Cần bạn duyệt</span>
+                        <p class="huong-dan-duyet">Bạn có thể thay đổi thủ công trước khi lưu và công bố.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hàng thông báo lưu cuối trang -->
+            <div class="thong-bao-footer-luu">
+                Sau khi lưu: Đội hình nháp đã lưu. Công bố mới gửi thông báo đến 8 người tham gia; có thể sửa lại trước buổi chơi.
+            </div>
+
+            <!-- Chân trang -->
+            <footer class="chan-trang">
+                Thiết kế minh họa • CourtConnect • Hà Nội • Không thực hiện giao dịch thật
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="xepdoi.js"></script>
+</body>
+</html>

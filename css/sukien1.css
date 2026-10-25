@@ -1,0 +1,451 @@
+/* Định dạng cơ bản & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body.than-trang {
+    background-color: #f6f6f2;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Nhãn nhỏ trên cùng góc trái */
+.nhan-tren-cung {
+    font-size: 11px;
+    color: #8c8c8c;
+    padding: 4px 0 2px 12px;
+    background-color: #f6f6f2;
+}
+
+/* Header */
+.thanh-dau-trang {
+    height: 54px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.nhieu-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #0d2c22;
+}
+
+.biet-tuong-logo {
+    font-size: 16px;
+}
+
+.nguoi-dung-thanh-tren {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13px;
+    color: #4a4a4a;
+}
+
+.nut-xo-nguoi-dung {
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+.nut-thong-bao {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* Layout chính dạng 2 cột */
+.khung-chinh {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+}
+
+/* Thanh Sidebar bên trái - ĐÃ CHỈNH MÀU XANH LÁ ĐẬM CHUẨN GIAO DIỆN */
+.thanh-ben-trai {
+    width: 220px;
+    background-color: #08221a; /* Màu xanh lá sẫm chuẩn giao diện CourtConnect */
+    color: #ffffff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 58px);
+}
+
+.ten-clb {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.danh-sach-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.muc-menu {
+    color: #a3b8b0;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.muc-menu:hover {
+    color: #ffffff;
+}
+
+/* Thẻ menu được chọn màu vàng chanh sáng */
+.muc-menu.kich-hoat {
+    background-color: #cbef43;
+    color: #08221a;
+    font-weight: 700;
+}
+
+.du-lieu-minh-hoa {
+    margin-top: auto;
+    font-size: 11px;
+    color: #5c796e;
+    padding: 0 12px 8px 12px;
+}
+
+.lien-ket-tro-giup {
+    color: #5c796e;
+    text-decoration: none;
+    font-size: 11px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lien-ket-tro-giup:hover {
+    color: #9cb8ad;
+}
+
+/* Vùng nội dung chính bên phải */
+.vung-noi-dung {
+    flex: 1;
+    padding: 32px 40px;
+}
+
+.duong-dan-trang {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.hang-tieu-de {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.tieu-de-trang {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.mo-ta-tieu-de {
+    font-size: 13px;
+    color: #666;
+}
+
+.nut-tao-su-kien {
+    background-color: #08221a;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nut-tao-su-kien:hover {
+    background-color: #10362a;
+}
+
+/* Thanh thẻ lọc trạng thái */
+.thanh-loc-trang-thai {
+    display: flex;
+    gap: 16px;
+    border-bottom: 1px solid #e2e2dd;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+}
+
+.the-loc {
+    background: none;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+.the-loc.kich-hoat {
+    color: #000;
+}
+
+.the-loc.kich-hoat::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #000;
+}
+
+/* Thẻ Sự Kiện Tiêu Điểm (Nổi bật) */
+.the-su-kien-noi-bat {
+    background-color: #08221a; /* Màu xanh đậm đồng bộ với menu bên trái */
+    color: #fff;
+    border-radius: 16px;
+    padding: 28px 32px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.nhan-su-kien-da-cong-bo {
+    font-size: 11px;
+    font-weight: 700;
+    color: #7de880;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.tieu-de-su-kien-noi-bat {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.thong-tin-dia-diem-thoi-gian {
+    font-size: 13px;
+    color: #c0d1ca;
+    margin-bottom: 16px;
+}
+
+.hang-nhan-thong-tin {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.nhan-mon-the-thao {
+    background-color: #cbef43;
+    color: #08221a;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.nhan-so-luong-dang-ky {
+    background-color: #7de880;
+    color: #08221a;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.hang-nut-hanh-dong-noi-bat {
+    display: flex;
+    gap: 8px;
+}
+
+.nut-xem-su-kien {
+    background-color: #ffffff;
+    color: #08221a;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nut-xep-doi {
+    background-color: #ffffff;
+    color: #08221a;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.noi-dung-noi-bat-phai {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nhan-xac-nhan-dang-ky {
+    font-size: 10px;
+    font-weight: 700;
+    color: #a0b8af;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.ti-le-dang-ky {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.mo-ta-so-san {
+    font-size: 12px;
+    color: #d0e0d9;
+    margin-bottom: 4px;
+}
+
+.ghi-chu-xet-duyet {
+    font-size: 12px;
+    color: #7de880;
+}
+
+/* Thanh Bộ Lọc Tìm Kiếm */
+.khung-bo-loc {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.nhom-input-tim-kiem {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.nhan-input {
+    font-size: 10px;
+    color: #777;
+    margin-bottom: 2px;
+}
+
+.input-tim-kiem {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    color: #111;
+    font-weight: 500;
+    background: transparent;
+    width: 100%;
+}
+
+.nut-loc {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+}
+
+.nut-loc:hover {
+    background-color: #f0f0f0;
+}
+
+/* Khung Bảng Danh Sách */
+.khung-bang-su-kien {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 16px 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    margin-bottom: 24px;
+}
+
+.bang-su-kien {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.bang-su-kien th {
+    font-size: 12px;
+    font-weight: 600;
+    color: #222;
+    padding: 14px 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.bang-su-kien td {
+    font-size: 12px;
+    padding: 16px 12px;
+    color: #333;
+}
+
+.cot-tieu-de-su-kien {
+    font-weight: 700;
+    color: #111;
+}
+
+.nut-thao-tac {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nut-thao-tac:hover {
+    text-decoration: underline;
+}
+
+.foot-bang {
+    font-size: 11px;
+    color: #888;
+    margin-top: 12px;
+    padding-top: 12px;
+}
+
+/* Chân trang ghi chú */
+.ghi-chu-chan-trang {
+    font-size: 11px;
+    color: #888;
+    line-height: 1.6;
+}
