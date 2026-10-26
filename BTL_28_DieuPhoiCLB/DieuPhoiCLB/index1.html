@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourtConnect - Điều phối CLB</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="sukien1.css">
+    <link rel="stylesheet" href="dieuphoi.css">
+</head>
+<body class="than-trang">
+    <div class="nhan-tren-cung">Điều phối CLB · Sự kiện</div>
+    <header class="thanh-dau-trang">
+        <div class="nhieu-logo">
+            <i class="fa-solid fa-bars-staggered biet-tuong-logo"></i>
+            <span class="ten-thuong-hieu">CourtConnect</span>
+        </div>
+        <div class="nguoi-dung-thanh-tren">
+            <span class="thong-tin-nguoi-dung">Điều phối CLB · <strong>Thu Huong</strong> <i
+                    class="fa-solid fa-chevron-down nut-xo-nguoi-dung"></i></span>
+            <button class="nut-thong-bao" id="nutThongBao" title="Thông báo"><i class="fa-regular fa-bell"></i></button>
+        </div>
+    </header>
+    <div class="khung-chinh">
+        <aside class="thanh-ben-trai">
+            <h2 class="ten-clb">CLB Nhịp Sân</h2>
+            <nav class="danh-sach-menu">
+                <a href="index1.html" class="muc-menu kich-hoat" data-muc="su-kien" aria-current="page">Sự kiện</a>
+                <a href="chitiet.html" class="muc-menu" data-muc="chi-tiet">Chi tiết</a>
+                <a href="thanhvien.html" class="muc-menu" data-muc="danh-sach-thanh-vien">Danh sách thành viên</a>
+                <a href="xepdoi.html" class="muc-menu" data-muc="xep-doi">Xếp đội</a>
+                <a href="#" class="muc-menu" data-muc="thong-bao">Thông báo</a>
+            </nav>
+            <div class="du-lieu-minh-hoa">Dữ liệu minh họa • 10/2026</div>
+            <a href="#" class="lien-ket-tro-giup">Trợ giúp & phản hồi <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </aside>
+        <main class="vung-noi-dung">
+
+            <div class="duong-dan-trang">ĐIỀU PHỐI CLB / COURTCONNECT</div>
+            <div class="hang-tieu-de">
+                <div>
+                    <h1 class="tieu-de-trang">Tạo cuộc hẹn cho cả câu lạc bộ.</h1>
+                    <p class="mo-ta-tieu-de">CLB Nhịp Sân · Từ đăng ký đến đội hình và tổng kết.</p>
+                </div>
+                <button class="nut-tao-su-kien" id="nutTaoSuKien">+ Tạo sự kiện</button>
+            </div>
+            <div class="thanh-loc-trang-thai">
+                <button class="the-loc" data-trangthai="tat-ca">Tất cả</button>
+                <button class="the-loc kich-hoat" data-trangthai="sap-dien-ra">Sắp diễn ra</button>
+                <button class="the-loc" data-trangthai="dang-dien-ra">Đang diễn ra</button>
+                <button class="the-loc" data-trangthai="hoan-thanh">Hoàn thành</button>
+                <button class="the-loc" data-trangthai="da-huy">Đã hủy</button>
+                <button class="the-loc" data-trangthai="luu-tru">Lưu trữ</button>
+            </div>
+            <div class="the-su-kien-noi-bat">
+                <div class="noi-dung-noi-bat-trai">
+                    <span class="nhan-su-kien-da-cong-bo">10/10 · SỰ KIỆN ĐÃ CÔNG BỐ</span>
+                    <h2 class="tieu-de-su-kien-noi-bat">Giao lưu Nhịp Sân thứ bảy</h2>
+                    <p class="thong-tin-dia-diem-thoi-gian">Tây Hồ Sports · P03 & P04 · 18:00–20:00</p>
+                    <div class="hang-nhan-thong-tin">
+                        <span class="nhan-mon-the-thao">Pickleball · 3.0–3.5</span>
+                        <span class="nhan-so-luong-dang-ky">8/8 đã đăng ký</span>
+                    </div>
+                    <div class="hang-nut-hanh-dong-noi-bat">
+                        <button class="nut-xem-su-kien" onclick="xemSuKien('Giao lưu Nhịp Sân thứ bảy')">Xem sự
+                            kiện</button>
+                        <button class="nut-xep-doi" onclick="xepDoi('Giao lưu Nhịp Sân thứ bảy')">Xếp đội <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                    </div>
+                </div>
+                <div class="noi-dung-noi-bat-phai">
+                    <div class="nhan-xac-nhan-dang-ky">ĐĂNG KÝ ĐÃ XÁC NHẬN</div>
+                    <div class="ti-le-dang-ky">8 / 8</div>
+                    <div class="mo-ta-so-san">2 sân · 2 đội · 4 người / đội</div>
+                    <div class="ghi-chu-xet-duyet">Đội hình nháp cần bạn duyệt</div>
+                </div>
+            </div>
+            <div class="khung-bo-loc">
+                <div class="nhom-input-tim-kiem">
+                    <label class="nhan-input">Tìm sự kiện</label>
+                    <input type="text" id="inputTimKiem" class="input-tim-kiem" placeholder="Tên sự kiện...">
+                </div>
+                <div class="nhom-input-tim-kiem">
+                    <label class="nhan-input">Môn</label>
+                    <select id="chonMon" class="input-tim-kiem">
+                        <option value="tat-ca">Tất cả</option>
+                        <option value="pickleball">Pickleball</option>
+                        <option value="cau-long">Cầu lông</option>
+                    </select>
+                </div>
+                <div class="nhom-input-tim-kiem">
+                    <label class="nhan-input">Khoảng ngày</label>
+                    <input type="text" id="khoangNgay" class="input-tim-kiem" placeholder="Ví dụ: 10/2026">
+                </div>
+                <button class="nut-loc" id="nutXacNhanLoc">Lọc</button>
+            </div>
+            <div class="khung-bang-su-kien">
+                <table class="bang-su-kien">
+                    <thead>
+                        <tr>
+                            <th>Sự kiện</th>
+                            <th>Lịch / địa điểm</th>
+                            <th>Đăng ký</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="thanBangSuKien">
+                    </tbody>
+                </table>
+                <div class="foot-bang">Hiển thị 5 bản ghi minh họa · Trang 1</div>
+            </div>
+
+            <div class="ghi-chu-chan-trang">
+                <p>Lưu trữ chỉ ẩn khỏi danh sách hoạt động; không xóa lịch sử đăng ký.</p>
+                <p>Thiết kế minh họa • CourtConnect • Hà Nội • Không thực hiện giao dịch thật</p>
+            </div>
+
+        </main>
+    </div>
+
+    <dialog id="hopTaoSuKien" aria-labelledby="tieuDeHopTaoSuKien">
+        <form id="formTaoSuKien">
+            <h2 id="tieuDeHopTaoSuKien">Tạo sự kiện mới</h2>
+            <label for="tenSuKienMoi">Tên sự kiện</label>
+            <input id="tenSuKienMoi" name="tenSuKien" required maxlength="100">
+            <label for="monSuKienMoi">Môn thể thao</label>
+            <select id="monSuKienMoi" name="mon" required>
+                <option value="pickleball">Pickleball</option>
+                <option value="cau-long">Cầu lông</option>
+            </select>
+            <label for="ngaySuKienMoi">Ngày</label>
+            <input id="ngaySuKienMoi" name="ngay" type="date" required>
+            <label for="diaDiemSuKienMoi">Địa điểm</label>
+            <input id="diaDiemSuKienMoi" name="diaDiem" required maxlength="100">
+            <label for="sucChuaSuKienMoi">Sức chứa</label>
+            <input id="sucChuaSuKienMoi" name="sucChua" type="number" min="1" max="100" value="8" required>
+            <div class="hop-tao-su-kien-hanh-dong">
+                <button type="button" id="dongHopTaoSuKien">Đóng</button>
+                <button type="submit">Tạo sự kiện</button>
+            </div>
+        </form>
+    </dialog>
+
+    <div id="thongBaoTrang" class="thong-bao-trang" role="status" aria-live="polite"></div>
+
+    <script src="duLieuCLB.js"></script>
+    <script src="sukien1.js"></script>
+    <script src="dieuphoi.js"></script>
+    <script src="../dieu-huong-vai-tro.js"></script>
+</body>
+
+</html>
