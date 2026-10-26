@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourtConnect - Tây Hồ Sports Dashboard</title>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="chusan_tongquan.css">
+</head>
+<body class="page-body">
+
+    <!-- Top Navigation Header -->
+    <header class="header">
+        <!-- 1. Left: Logo CourtConnect -->
+        <div class="logo-container">
+            <div class="logo-grid">
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+            </div>
+            <span class="logo-text">CourtConnect</span>
+        </div>
+
+        <!-- 2. Middle: Owner Info (Centered in header) -->
+        <div class="owner-info">
+            <span>Chủ sân</span>
+            <span class="separator">-</span>
+            <span class="owner-name">Tuấn Phong</span>
+            <i data-lucide="chevron-down" class="icon-sm text-gray"></i>
+        </div>
+
+        <!-- 3. Right: Bell Notification Icon -->
+        <div class="header-right">
+            <button class="icon-button">
+                <i data-lucide="bell" class="icon-md"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Venue Name -->
+            <h2 class="venue-title">Tây Hồ Sports</h2>
+
+            <!-- Navigation List -->
+            <nav class="nav-list">
+                <!-- 1. Tổng quan -->
+                <div><a href="chusan_tongquan.html" class="nav-btn-active">Tổng quan</a></div>
+                <div><a href="chusan_quanlysan.html" class="nav-link">Quản lý sân</a></div>
+                <div><a href="chusan_lichkhunggio.html" class="nav-link">Lịch & khung giờ</a></div>
+                <div><a href="chusan_dondatsan.html" class="nav-link">Đơn đặt sân</a></div>
+                <div><a href="chusan_thongbao.html" class="nav-link">Thông báo</a></div>
+
+                <!-- Footer items -->
+                <div class="sidebar-footer">
+                    <p>Dữ liệu minh họa • 10/2026</p>
+                    <a href="#" class="help-link">Trợ giúp & phản hồi <i data-lucide="arrow-up-right" class="icon-xs"></i></a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            
+            <!-- Page Header Section -->
+            <div class="page-header">
+                <div>
+                    <div class="breadcrumb">CHỦ SÂN <span class="breadcrumb-sep">/</span> COURTCONNECT</div>
+                    <h1 class="page-title">Sẵn sàng cho một ngày kín nhịp.</h1>
+                    <p class="page-subtitle">Tây Hồ Sports · Thứ bảy, 10/10/2026 · Dữ liệu vận hành minh họa</p>
+                </div>
+                <div>
+                    <button class="btn-primary">Mở lịch sân<i data-lucide="arrow-up-right" class="icon-sm"></i></button>
+                </div>
+            </div>
+
+            <!-- Metric Cards Row -->
+            <div class="metrics-grid">
+                <!-- Metric 1 -->
+                <div class="card card-metric">
+                    <p class="metric-label">Khung 2 giờ đã đặt</p>
+                    <div class="metric-value">16/32</div>
+                    <p class="metric-sub">4 sân × 8 khung hôm nay</p>
+                </div>
+
+                <!-- Metric 2 -->
+                <div class="card card-metric">
+                    <p class="metric-label">Tỷ lệ lấp đầy</p>
+                    <div class="metric-value">50%</div>
+                    <p class="metric-sub">Chỉ tính đơn đã xác nhận</p>
+                </div>
+
+                <!-- Metric 3 -->
+                <div class="card card-metric">
+                    <p class="metric-label">Đơn chờ duyệt</p>
+                    <div class="metric-value">3</div>
+                    <p class="metric-sub">Cần phản hồi trước giờ chơi</p>
+                </div>
+
+                <!-- Metric 4 -->
+                <div class="card card-metric">
+                    <p class="metric-label">Doanh thu mô phỏng</p>
+                    <div class="metric-value">5,22 triệu</div>
+                    <p class="metric-sub">9 khung thường + 7 cao điểm</p>
+                </div>
+            </div>
+
+            <!-- Middle Section: Chart & Action Priority -->
+            <div class="middle-grid">
+                <!-- Revenue Trend Chart Box -->
+                <div class="card chart-card">
+                    <div>
+                        <div class="chart-header">
+                            <h3 class="card-title">Nhịp doanh thu · 7 ngày</h3>
+                            <span class="badge-tag">Tuần này</span>
+                        </div>
+                        <p class="chart-subtitle">Triệu đồng · Dữ liệu mẫu 04–10/10</p>
+                    </div>
+
+                    <!-- Chart Canvas -->
+                    <div class="chart-canvas-container"><canvas id="revenueChart"></canvas></div>
+                </div>
+
+                <!-- Action Priority Box -->
+                <div class="card priority-card">
+                    <div class="priority-section">
+                        <h3 class="card-title">Ưu tiên hôm nay</h3>
+                        
+                        <div class="alert-header">
+                            <i data-lucide="clock" class="icon-sm text-alert"></i>
+                            <span>3 đơn cần duyệt</span>
+                        </div>
+
+                        <!-- Orders List -->
+                        <div class="orders-list">
+                            <p class="order-item">CC-1011 · Quốc Bảo · P04</p>
+                            <p class="order-item">CC-1012 · Mai Linh · P03</p>
+                            <p class="order-item">CC-1013 · Hoàng Long · P01</p>
+                        </div>
+                    </div>
+
+                    <div class="priority-actions">
+                        <div>
+                            <button class="btn-primary">Xem đơn chờ</button>
+                        </div>
+
+                        <!-- Callout Note Box -->
+                        <div class="callout-box">
+                            Kiểm tra lịch trống trước khi duyệt. AI chỉ hỗ trợ, không tự từ chối.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Table Section: Next Bookings -->
+            <div class="table-section">
+                <div class="table-header">
+                    <h2 class="section-title">Lịch đến sân tiếp theo</h2>
+                    <button class="btn-outline">Xem tất cả</button>
+                </div>
+
+                <!-- Table Container -->
+                <div class="card table-card">
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th class="th-left">Mã đơn / người đặt</th>
+                                    <th>Sân</th>
+                                    <th>Thời gian</th>
+                                    <th>Trạng thái</th>
+                                    <th class="th-right">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="td-left td-highlight">CC-1010 · Minh Anh</td>
+                                    <td>P01</td>
+                                    <td>16:00–18:00</td>
+                                    <td>Đã xác nhận</td>
+                                    <td class="td-right td-action">Xem / Nhận sân</td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td class="td-left td-highlight">CC-1008 · Bảo Trầm</td>
+                                    <td>P02</td>
+                                    <td>18:00–20:00</td>
+                                    <td>Đã xác nhận</td>
+                                    <td class="td-right td-action">Xem chi tiết</td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td class="td-left td-highlight">CC-1009 · CLB Nhịp Sản</td>
+                                    <td>P03 + P04</td>
+                                    <td>18:00–20:00</td>
+                                    <td>Đã xác nhận</td>
+                                    <td class="td-right td-action">Xem sự kiện</td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td class="td-left td-highlight">CC-1011 · Quốc Bảo</td>
+                                    <td>P04</td>
+                                    <td>20:00–22:00</td>
+                                    <td>Chờ duyệt</td>
+                                    <td class="td-right td-action">Duyệt / Từ chối</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Table Footer Pagination -->
+                    <div class="table-footer">
+                        Hiển thị 4 bản ghi minh họa · Trang 1
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Footer Note -->
+            <footer class="page-footer">
+                Thiết kế minh họa • CourtConnect • Hà Nội • Không thực hiện giao dịch thật
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="chusan_tongquan.js"></script>
+    <script src="../BTL_28_DieuPhoiCLB/dieu-huong-vai-tro.js"></script>
+</body>
+</html>

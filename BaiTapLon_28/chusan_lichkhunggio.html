@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourtConnect - Lịch & khung giờ</title>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="chusan_lichkhunggio.css">
+</head>
+<body class="page-body">
+
+    <!-- Top Navigation Header -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-grid">
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+            </div>
+            <span class="logo-text">CourtConnect</span>
+        </div>
+
+        <div class="owner-info">
+            <span>Chủ sân</span>
+            <span class="separator">-</span>
+            <span class="owner-name">Tuấn Phong</span>
+            <i data-lucide="chevron-down" class="icon-sm text-gray"></i>
+        </div>
+
+        <div class="header-right">
+            <button class="icon-button">
+                <i data-lucide="bell" class="icon-md"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="venue-title">Tây Hồ Sports</h2>
+
+            <nav class="nav-list">
+                <div><a href="chusan_tongquan.html" class="nav-link">Tổng quan</a></div>
+                <div><a href="chusan_quanlysan.html" class="nav-link">Quản lý sân</a></div>
+                <div><a href="chusan_lichkhunggio.html" class="nav-btn-active">Lịch & khung giờ</a></div>
+                <div><a href="chusan_dondatsan.html" class="nav-link">Đơn đặt sân</a></div>
+                <div><a href="chusan_thongbao.html" class="nav-link">Thông báo</a></div>
+
+                <div class="sidebar-footer">
+                    <p>Dữ liệu minh họa • 10/2026</p>
+                    <a href="#" class="help-link">Trợ giúp & phản hồi <i data-lucide="arrow-up-right" class="icon-xs"></i></a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            
+            <!-- Page Header Section -->
+            <div class="page-header-model">
+                <div>
+                    <div class="breadcrumb">CHỦ SÂN <span class="breadcrumb-sep">/</span> COURTCONNECT</div>
+                    <h1 class="page-title">Điều phối thời gian trên từng sân.</h1>
+                    <p class="page-subtitle">Tuần 05–11/10/2026 • Lịch minh họa theo sân và khung 2 giờ</p>
+                </div>
+                <div class="add-btn-container-row">
+                    <button class="btn-primary btn-add-custom">+ Tạo khung lặp</button>
+                </div>
+            </div>
+
+            <!-- Cụm chọn ngày trong tuần & Chú thích trạng thái chuẩn 100% như ảnh mẫu -->
+            
+            <!-- Cụm chọn ngày trong tuần, nút chuyển tuần & Chú thích trạng thái -->
+            <div class="schedule-control-section">
+                <!-- Hàng 1: Các ngày trong tuần bên trái & Nút chuyển tuần bên phải -->
+                <div class="days-nav-header-row">
+                    <div class="days-nav-row">
+                        <span class="day-text-item">T2 · 05</span>
+                        <span class="day-text-item">T3 · 06</span>
+                        <span class="day-text-item">T4 · 07</span>
+                        <span class="day-text-item">T5 · 08</span>
+                        <span class="day-text-item">T6 · 09</span>
+                        <span class="day-text-item active">T7 · 10</span>
+                        <span class="day-text-item">CN · 11</span>
+                    </div>
+                    <div class="week-pagination-group">
+                        <button class="btn-week-nav">‹ Tuần trước</button>
+                        <button class="btn-week-nav">Tuần sau ›</button>
+                    </div>
+                </div>
+
+                <!-- Hàng 2: Chú thích trạng thái -->
+                <div class="status-legend-inline">
+                    <span class="legend-txt legend-trong">Trống</span>
+                    <span class="legend-txt legend-dadat">Đã đặt</span>
+                    <span class="legend-txt legend-dangchon">Đang chọn</span>
+                    <span class="legend-txt legend-bichan">
+                        <i data-lucide="clock" class="icon-clock-xs"></i> Bị chặn / bảo trì
+                    </span>
+                </div>
+            </div>
+
+            <!-- Main Schedule Grid Table Card -->
+            <div class="card schedule-table-card">
+                <div class="schedule-card-header">
+                    <h3>Thứ bảy · 10/10 · 4 sân hoạt động</h3>
+                </div>
+                
+                <div class="table-wrapper">
+                    <table class="schedule-grid-table">
+                        <thead>
+                            <tr>
+                                <th class="th-left">Sân / giờ</th>
+                                <th>06–08</th>
+                                <th>08–10</th>
+                                <th>10–12</th>
+                                <th>12–14</th>
+                                <th>14–16</th>
+                                <th>16–18</th>
+                                <th>18–20</th>
+                                <th>20–22</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- P01 -->
+                            <tr>
+                                <td class="td-left td-court-name">P01</td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-dangchon"><span>Đã đặt</span><small>CC-1010</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>360.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>360.000đ</small></div></td>
+                            </tr>
+                            <!-- P02 -->
+                            <tr>
+                                <td class="td-left td-court-name">P02</td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>360.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>360.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>360.000đ</small></div></td>
+                            </tr>
+                            <!-- P03 -->
+                            <tr>
+                                <td class="td-left td-court-name">P03</td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>360.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>360.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>360.000đ</small></div></td>
+                            </tr>
+                            <!-- P04 -->
+                            <tr>
+                                <td class="td-left td-court-name">P04</td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>300.000đ</small></div></td>
+                                <td><div class="slot-box slot-trong"><span>Trống</span><small>360.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>360.000đ</small></div></td>
+                                <td><div class="slot-box slot-dadat"><span>Đã đặt</span><small>360.000đ</small></div></td>
+                            </tr>
+                            <!-- P05 -->
+                            <tr>
+                                <td class="td-left td-court-name">P05</td>
+                                <td><div class="slot-box slot-baotri"><span>Bảo trì</span><small>Không mở</small></div></td>
+                                <td><div class="slot-box slot-baotri"><span>Bảo trì</span><small>Không mở</small></div></td>
+                                <td><div class="slot-box slot-baotri"><span>Bảo trì</span><small>Không mở</small></div></td>
+                                <td><div class="slot-box slot-baotri"><span>Bảo trì</span><small>Không mở</small></div></td>
+                                <td><div class="slot-box slot-baotri"><span>Bảo trì</span><small>Không mở</small></div></td>
+                                <td><div class="slot-box slot-baotri"><span>Bảo trì</span><small>Không mở</small></div></td>
+                                <td><div class="slot-box slot-baotri"><span>Bảo trì</span><small>Không mở</small></div></td>
+                                <td><div class="slot-box slot-baotri"><span>Bảo trì</span><small>Không mở</small></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="schedule-footer-note">
+                    Giá theo khung 2 giờ: 06:00–16:00 là 300.000đ; 16:00–22:00 là 360.000đ. P05 không tính vào sức chứa.
+                </div>
+            </div>
+
+            <!-- Bottom Two Columns -->
+            <div class="bottom-grid-layout">
+                
+                <!-- Left: Chi tiết khung đang chọn -->
+                <div class="card detail-slot-card">
+                    <h3 class="card-title">Chi tiết khung đang chọn</h3>
+                    
+                    <div class="badge-code-row">
+                        <span class="badge-code">CC-1010 · Đã đặt</span>
+                    </div>
+
+                    <div class="slot-info-main">
+                        <h4 class="slot-time-title">P01 · 10/10 · 16:00–18:00</h4>
+                        <p class="slot-customer-info">Minh Anh · 4 người · 360.000đ</p>
+                    </div>
+
+                    <div class="slot-actions-row">
+                        <button class="btn-primary btn-styled-box">Xem đơn đặt sân</button>
+                        <button class="btn-outline btn-styled-box">Đổi lịch</button>
+                    </div>
+
+                    <div class="warning-alert-box">
+                        Không sửa giá hoặc chặn một khung đã đặt nếu chưa xử lý đơn liên quan.
+                    </div>
+                </div>
+
+                <!-- Right: Tạo / chỉnh sửa lịch lặp -->
+                <div class="card recurring-form-card">
+                    <h3 class="card-title">Tạo / chỉnh sửa lịch lặp</h3>
+
+                    <div class="form-row-2">
+                        <div>
+                            <label class="form-label">Sân</label>
+                            <input type="text" value="P01–P04" class="model-input">
+                        </div>
+                        <div>
+                            <label class="form-label">Ngày áp dụng</label>
+                            <input type="text" value="Thứ 2 đến Chủ nhật" class="model-input">
+                        </div>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div>
+                            <label class="form-label">Giờ bắt đầu / kết thúc</label>
+                            <input type="text" value="16:00 / 18:00" class="model-input">
+                        </div>
+                        <div>
+                            <label class="form-label">Giá mới khung</label>
+                            <input type="text" value="360.000đ" class="model-input">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="form-label">Khoảng ngày</label>
+                        <input type="text" value="12/10–31/10/2026" class="model-input">
+                    </div>
+
+                    <div class="conflict-notice-box">
+                        Xung đột: P02 · 17/10 · 16:00–18:00 đã đặt. Bỏ khung này hoặc đổi giờ.
+                    </div>
+
+                    <div class="form-actions-row">
+                        <button class="btn-primary btn-styled-box">Lưu khung hợp lệ</button>
+                        <button class="btn-outline btn-styled-box">Chặn khung trống</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="page-footer">
+                Thiết kế minh họa • CourtConnect • Hà Nội • Không thực hiện giao dịch thật
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="chusan_lichkhunggio.js"></script>
+    <script src="../BTL_28_DieuPhoiCLB/dieu-huong-vai-tro.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourtConnect - Đơn đặt sân</title>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="chusan_dondatsan.css">
+</head>
+<body class="page-body">
+
+    <!-- Top Navigation Header -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-grid">
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+            </div>
+            <span class="logo-text">CourtConnect</span>
+        </div>
+
+        <div class="owner-info">
+            <span>Chủ sân</span>
+            <span class="separator">-</span>
+            <span class="owner-name">Tuấn Phong</span>
+            <i data-lucide="chevron-down" class="icon-sm text-gray"></i>
+        </div>
+
+        <div class="header-right">
+            <button class="icon-button">
+                <i data-lucide="bell" class="icon-md"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="venue-title">Tây Hồ Sports</h2>
+
+            <nav class="nav-list">
+                <div><a href="chusan_tongquan.html" class="nav-link">Tổng quan</a></div>
+                <div><a href="chusan_quanlysan.html" class="nav-link">Quản lý sân</a></div>
+                <div><a href="chusan_lichkhunggio.html" class="nav-link">Lịch & khung giờ</a></div>
+                <div><a href="chusan_dondatsan.html" class="nav-btn-active">Đơn đặt sân</a></div>
+                <div><a href="chusan_thongbao.html" class="nav-link">Thông báo</a></div>
+
+                <div class="sidebar-footer">
+                    <p>Dữ liệu minh họa • 10/2026</p>
+                    <a href="#" class="help-link">Trợ giúp & phản hồi <i data-lucide="arrow-up-right" class="icon-xs"></i></a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            
+            <!-- Page Header Section -->
+            <div class="page-header-model">
+                <div>
+                    <div class="breadcrumb">CHỦ SÂN <span class="breadcrumb-sep">/</span> COURTCONNECT</div>
+                    <h1 class="page-title">Xử lý rõ ràng. Đón người chơi đúng hẹn.</h1>
+                    <p class="page-subtitle">Tra cứu đơn đặt sân và hỗ trợ vận hành bằng dữ liệu minh họa.</p>
+                </div>
+                <div class="add-btn-container-row">
+                    <button class="btn-primary btn-add-custom" id="btnCreateBooking">+ Tạo đơn tại sân</button>
+                </div>
+            </div>
+
+            <!-- Filter Inputs Group -->
+            <div class="filter-inputs-row">
+                <div class="filter-field search-field">
+                    <label class="input-label">Tìm kiếm</label>
+                    <input type="text" id="searchInput" placeholder="Mã đơn, tên, số điện thoại..." class="filter-input">
+                </div>
+                
+                <div class="filter-field date-field">
+                    <label class="input-label">Ngày</label>
+                    <input type="text" id="dateInput" value="10/10/2026" class="filter-input">
+                </div>
+                
+                <div class="filter-field court-field">
+                    <label class="input-label">Sân</label>
+                    <select id="courtSelect" class="filter-input filter-select">
+                        <option value="all">Tất cả</option>
+                        <option value="P01">Sân P01</option>
+                        <option value="P02">Sân P02</option>
+                        <option value="P03">Sân P03</option>
+                        <option value="P04">Sân P04</option>
+                    </select>
+                </div>
+
+                <button class="btn-filter" id="btnFilter">Lọc đơn</button>
+            </div>
+
+            <!-- Status Navigation Tabs -->
+            <div class="status-tabs-row">
+                <span class="tab-item active" data-tab="all">Tất cả</span>
+                <span class="tab-item" data-tab="pending">Chờ duyệt · 3</span>
+                <span class="tab-item" data-tab="confirmed">Đã xác nhận</span>
+                <span class="tab-item" data-tab="completed">Hoàn thành</span>
+                <span class="tab-item" data-tab="cancelled">Đã hủy</span>
+            </div>
+
+            <!-- Main Orders Table Card (Chứa dữ liệu bảng tĩnh) -->
+            <div class="card orders-table-card">
+                <div class="table-wrapper">
+                    <table class="orders-table">
+                        <thead>
+                            <tr>
+                                <th>Đơn / người đặt</th>
+                                <th>Sân & giờ</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                                <th class="text-right">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersTableBody">
+                            <tr>
+                                <td><span class="cell-order-code">CC-1010</span> · Minh Anh</td>
+                                <td>P01 · 16:00–18:00</td>
+                                <td>360.000đ</td>
+                                <td>Đã xác nhận</td>
+                                <td class="text-right"><button class="cell-action-btn" data-code="CC-1010">Xem / Nhận sân</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cell-order-code">CC-1008</span> · Bảo Trâm</td>
+                                <td>P02 · 18:00–20:00</td>
+                                <td>360.000đ</td>
+                                <td>Đã xác nhận</td>
+                                <td class="text-right"><button class="cell-action-btn" data-code="CC-1008">Xem chi tiết</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cell-order-code">CC-1009</span> · CLB Nhịp Sản</td>
+                                <td>P03+P04 · 18:00–20:00</td>
+                                <td>720.000đ</td>
+                                <td>Đã xác nhận</td>
+                                <td class="text-right"><button class="cell-action-btn" data-code="CC-1009">Xem chi tiết</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cell-order-code">CC-1011</span> · Quốc Bảo</td>
+                                <td>P04 · 20:00–22:00</td>
+                                <td>360.000đ</td>
+                                <td>Chờ duyệt</td>
+                                <td class="text-right"><button class="cell-action-btn" data-code="CC-1011">Xem / Duyệt</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cell-order-code">CC-1012</span> · Mai Linh</td>
+                                <td>P03 · 20:00–22:00</td>
+                                <td>360.000đ</td>
+                                <td>Chờ duyệt</td>
+                                <td class="text-right"><button class="cell-action-btn" data-code="CC-1012">Xem / Duyệt</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cell-order-code">CC-1013</span> · Hoàng Long</td>
+                                <td>P01 · 20:00–22:00</td>
+                                <td>360.000đ</td>
+                                <td>Chờ duyệt</td>
+                                <td class="text-right"><button class="cell-action-btn" data-code="CC-1013">Xem / Duyệt</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-footer-info" id="tableFooterInfo">
+                    Hiển thị 6 bản ghi minh họa · Trang 1
+                </div>
+            </div>
+
+            <!-- Bottom Two Column Section: No-show Risk & Human Actions -->
+            <div class="bottom-grid-layout">
+                
+                <!-- Left: AI No-show Risk Card -->
+                <div class="card noshow-risk-card">
+                    <div class="noshow-card-header">
+                        <div class="noshow-title-group">
+                            <i data-lucide="sparkles" class="icon-sparkle"></i>
+                            <h3 class="noshow-title">No-show Risk</h3>
+                        </div>
+                        <span class="badge-ai-demo">AI mô phỏng</span>
+                    </div>
+
+                    <div class="noshow-inputs-row">
+                        <div class="noshow-field">
+                            <label class="input-label">Đơn cần xem xét</label>
+                            <input type="text" value="CC-1011 · Quốc Bảo" class="noshow-input" readonly>
+                        </div>
+                        <div class="noshow-field">
+                            <label class="input-label">Khoảng dữ liệu</label>
+                            <input type="text" value="8 lần hẹn gần nhất · Mock" class="noshow-input" readonly>
+                        </div>
+                    </div>
+
+                    <div class="risk-summary-section">
+                        <div class="risk-heading-row">
+                            <h4 class="risk-heading">Cần liên hệ xác nhận lại</h4>
+                            <span class="risk-percentage">≈ 38% - Tham khảo</span>
+                        </div>
+                        <ul class="risk-bullets">
+                            <li>2/8 buổi vắng không báo trước trong dữ liệu mẫu.</li>
+                            <li>Lần hẹn gần nhất có mặt đúng giờ.</li>
+                            <li>Đơn hiện tại đặt sát giờ chơi; chưa phản hồi nhắc lịch.</li>
+                        </ul>
+                    </div>
+
+                    <div class="warning-amber-box">
+                        Độ chắc chắn thấp. Chỉ là hỗ trợ ra quyết định từ dữ liệu mô phỏng; nhân viên phải xem xét. Không tự phạt, khóa hay từ chối người chơi.
+                    </div>
+
+                    <div class="risk-actions-row">
+                        <button class="btn-primary btn-action-sm">Chấp nhận gợi ý</button>
+                        <button class="btn-sub-white">Sửa</button>
+                        <button class="btn-sub-white">Từ chối</button>
+                        <button class="btn-sub-white">Tạo lại</button>
+                        <button class="btn-sub-white">Lưu</button>
+                    </div>
+                </div>
+
+                <!-- Right: Human Operator Actions Card -->
+                <div class="card human-actions-card">
+                    <h3 class="card-title-dark">Thao tác con người</h3>
+                    <p class="card-desc">Chấp nhận gợi ý chỉ tạo nhắc việc gọi người đặt sân, không thay đổi trạng thái đơn.</p>
+
+                    <div class="human-btn-group">
+                        <button class="btn-pill-action" id="btnLogCall">Ghi nhận cuộc gọi</button>
+                        <button class="btn-pill-action" id="btnViewHistory">Xem lịch sử hẹn</button>
+                    </div>
+
+                    <p class="footer-subtext-muted">
+                        Đơn đã hoàn thành và đã hủy xem ở bộ lọc tương ứng.
+                    </p>
+                </div>
+
+            </div>
+
+            <footer class="page-footer">
+                Thiết kế minh họa • CourtConnect • Hà Nội • Không thực hiện giao dịch thật
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="chusan_dondatsan.js"></script>
+    <script src="../BTL_28_DieuPhoiCLB/dieu-huong-vai-tro.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourtConnect - Vận hành hệ thống & Báo cáo</title>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="chusan_baocao.css">
+</head>
+<body class="page-body">
+
+    <!-- Top Navigation Header -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-grid">
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+            </div>
+            <span class="logo-text">CourtConnect</span>
+        </div>
+
+        <div class="owner-info">
+            <span>Quản trị viên</span>
+            <span class="separator">-</span>
+            <span class="owner-name">Hải Nam</span>
+            <i data-lucide="chevron-down" class="icon-sm text-gray"></i>
+        </div>
+
+        <div class="header-right">
+            <button class="icon-button">
+                <i data-lucide="bell" class="icon-md"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="venue-title">Vận hành hệ thống</h2>
+
+            <nav class="nav-list">
+                <div><a href="#" class="nav-link">Môn thể thao</a></div>
+                <div><a href="#" class="nav-link">Người dùng</a></div>
+                <div><a href="quanly_baocao.html" class="nav-btn-active">Báo cáo thể thao</a></div>
+                <div><a href="#" class="nav-link">Thông báo</a></div>
+                <div class="sidebar-footer">
+                    <p>Dữ liệu minh họa • 10/2026</p>
+                    <a href="#" class="help-link">Trợ giúp & phản hồi <i data-lucide="arrow-up-right" class="icon-xs"></i></a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            
+            <!-- Page Header Section -->
+            <div class="page-header-model">
+                <div>
+                    <div class="breadcrumb">QUẢN TRỊ VIÊN <span class="breadcrumb-sep">/</span> COURTCONNECT</div>
+                    <h1 class="page-title">Đọc nhịp chơi của cộng đồng.</h1>
+                    <p class="page-subtitle">Số liệu tổng hợp giả lập · Không đại diện hoạt động hoặc doanh thu thực tế</p>
+                </div>
+                <div class="add-btn-container">
+                    <button class="btn-primary btn-add-custom">+ Tạo báo cáo</button>
+                </div>
+            </div>
+
+            <!-- Filter & Search Bar Row (4 ô ngang chuẩn chỉnh) -->
+            <div class="search-filter-container">
+                <!-- Ô 1: Khoảng ngày -->
+                <div class="filter-card-item">
+                    <span class="field-label">Khoảng ngày</span>
+                    <input type="text" value="01–10/10/2026" class="field-input">
+                </div>
+
+                <!-- Ô 2: Địa điểm -->
+                <div class="filter-card-item">
+                    <span class="field-label">Địa điểm</span>
+                    <div class="custom-select-wrapper">
+                        <select class="field-select">
+                            <option value="all">Tất cả 3 địa điểm</option>
+                            <option value="hanoi">Hà Nội</option>
+                        </select>
+                        <span class="select-arrow">˅</span>
+                    </div>
+                </div>
+
+                <!-- Ô 3: Môn -->
+                <div class="filter-card-item">
+                    <span class="field-label">Môn</span>
+                    <div class="custom-select-wrapper">
+                        <select class="field-select">
+                            <option value="all">Tất cả</option>
+                            <option value="pickleball">Pickleball</option>
+                            <option value="badminton">Cầu lông</option>
+                        </select>
+                        <span class="select-arrow">˅</span>
+                    </div>
+                </div>
+
+                <!-- Nút Áp dụng -->
+                <button class="btn-search-standalone">Áp dụng</button>
+            </div>
+
+            <!-- 4 Thẻ Thống Kê (Metric Cards) -->
+            <div class="metrics-grid-4">
+                <div class="card metric-card">
+                    <span class="metric-label">Đơn đặt sân</span>
+                    <h2 class="metric-value">120</h2>
+                    <p class="metric-sub">Tổng số đơn mẫu trong kỳ</p>
+                </div>
+                <div class="card metric-card">
+                    <span class="metric-label">Lượt tham gia</span>
+                    <h2 class="metric-value">384</h2>
+                    <p class="metric-sub">96 buổi hoàn thành × 4 người</p>
+                </div>
+                <div class="card metric-card">
+                    <span class="metric-label">Buổi hoàn thành</span>
+                    <h2 class="metric-value">96</h2>
+                    <p class="metric-sub">80% tổng đơn mẫu</p>
+                </div>
+                <div class="card metric-card">
+                    <span class="metric-label">Vắng không báo</span>
+                    <h2 class="metric-value">6,25%</h2>
+                    <p class="metric-sub">24/384 lượt mẫu</p>
+                </div>
+            </div>
+
+            <!-- Phần Biểu Đồ (2 Cột: Môn được đặt nhiều & Xu hướng vắng) -->
+            <!-- Phần Biểu Đồ (2 Cột) -->
+            <div class="charts-grid-2">
+                <!-- Cột trái: Môn được đặt nhiều -->
+                <div class="card chart-card">
+                    <h3 class="chart-title">Môn được đặt nhiều</h3>
+                    <p class="chart-subtitle">Số đơn mẫu · Tổng 120</p>
+                    
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span class="sport-name">Pickleball</span>
+                            <span class="sport-stat">78 đơn · 65%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item" style="margin-top: 1.5rem;">
+                        <div class="progress-info">
+                            <span class="sport-name">Cầu lông</span>
+                            <span class="sport-stat">42 đơn · 35%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill yellow" style="width: 35%;"></div>
+                        </div>
+                    </div>
+
+                    <p class="chart-footer-note">Đã hoàn thành 96 · Đã hủy 12 · Chờ / xác nhận 12</p>
+                </div>
+
+                <!-- Cột phải: Xu hướng vắng -->
+                <div class="card chart-card">
+                    <h3 class="chart-title">Xu hướng vắng · Dữ liệu mock</h3>
+                    <p class="chart-subtitle">Lượt vắng / lượt tham gia từng khoảng</p>
+
+                    <div class="bars-container">
+                        <div class="bar-group">
+                            <span class="bar-ratio">8/128</span>
+                            <div class="bar-box" style="height: 48px;"></div>
+                            <span class="bar-date">01–03/10</span>
+                        </div>
+                        <div class="bar-group">
+                            <span class="bar-ratio">10/128</span>
+                            <div class="bar-box active" style="height: 68px;"></div>
+                            <span class="bar-date">04–06/10</span>
+                        </div>
+                        <div class="bar-group">
+                            <span class="bar-ratio">6/128</span>
+                            <div class="bar-box" style="height: 36px;"></div>
+                            <span class="bar-date">07–10/10</span>
+                        </div>
+                    </div>
+
+                    <p class="chart-footer-note">Chỉ dùng để theo dõi tổng hợp; không kết luận về một cá nhân.</p>
+                </div>
+            </div>
+
+            <!-- Bảng Báo cáo đã lưu -->
+            <div class="section-header-row">
+                <h3 class="section-heading">Báo cáo đã lưu</h3>
+                <button class="btn-outline-custom">Tạo từ bộ lọc hiện tại</button>
+            </div>
+
+            <div class="card table-card">
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th class="th-left">Tên báo cáo</th>
+                                <th>Phạm vi</th>
+                                <th>Người tạo</th>
+                                <th>Trạng thái</th>
+                                <th class="th-right">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-left td-highlight">Nhịp chơi đầu tháng 10</td>
+                                <td>01–10/10 · Tất cả</td>
+                                <td>Hải Nam</td>
+                                <td><span class="status-saved">Đã lưu</span></td>
+                                <td class="td-right td-action">Đọc · Sửa · Lưu trữ</td>
+                            </tr>
+                            <tr>
+                                <td class="td-left td-highlight">Pickleball cuối tháng 9</td>
+                                <td>20–30/09 · Pickleball</td>
+                                <td>Hải Nam</td>
+                                <td><span class="status-saved">Đã lưu</span></td>
+                                <td class="td-right td-action">Đọc · Sửa · Lưu trữ</td>
+                            </tr>
+                            <tr>
+                                <td class="td-left td-highlight">Tổng kết tháng 8</td>
+                                <td>01–31/08 · Tất cả</td>
+                                <td>Hải Nam</td>
+                                <td><span class="status-saved">Đã lưu</span></td>
+                                <td class="td-right td-action">Đọc · Khôi phục</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    Hiển thị 3 bản ghi minh họa · Trang 1
+                </div>
+            </div>
+
+ <!-- Cụm tạo báo cáo mới ở dưới cùng -->
+            <div class="bottom-report-section">
+                <!-- Hàng chứa ô input trắng độc lập và 2 nút bấm bên ngoài -->
+                <div class="form-row-inline-action">
+                    <!-- Ô input màu trắng độc lập -->
+                    <div class="input-card-box">
+                        <label class="form-label">Tên báo cáo mới *</label>
+                        <input type="text" value="Nhịp chơi đầu tháng 10" class="model-input">
+                    </div>
+
+                    <!-- 2 Nút bấm nằm ngoài thẻ card trắng -->
+                    <div class="form-actions-inline">
+                        <button class="btn-primary btn-styled-box">Lưu báo cáo</button>
+                        <button class="btn-danger-light btn-styled-box">Xác nhận lưu trữ</button>
+                    </div>
+                </div>
+
+                <!-- Dòng banner thông báo màu nhạt nằm độc lập bên dưới -->
+                <div class="info-banner-standalone">
+                    Báo cáo lưu bộ lọc và ảnh chụp dữ liệu mẫu. Không có thống kê thật hay xuất dữ liệu cá nhân.
+                </div>
+            </div>
+
+            <footer class="page-footer">
+                Thiết kế minh họa • CourtConnect • Hà Nội • Không thực hiện giao dịch thật
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="chusan_baocao.js"></script>
+    <script src="../BTL_28_DieuPhoiCLB/dieu-huong-vai-tro.js"></script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+/* --- Kế thừa biến màu gốc từ chusan_tongquan.css --- */
+@import url('chusan_tongquan.css');
+
+/* --- CẬP NHẬT MÀU NÚT BẤM CHÍNH SANG #0B2B22 --- */
+:root {
+    --brand-primary-fresh: #0B2B22; 
+    --brand-primary-hover: #071D17; 
+}
+
+.btn-primary {
+    background-color: var(--brand-primary-fresh) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    transition: background-color 150ms ease !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--brand-primary-hover) !important;
+}
+
+/* Riêng ô "Đã đặt" trong bảng lịch giữ màu xanh đậm #0B2B22 */
+.slot-dadat {
+    background-color: #0B2B22 !important;
+    color: #FFFFFF !important;
+}
+
+/* --- Header & Cụm nút Thao tác --- */
+.page-header-model {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+    .page-header-model {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.add-btn-container-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 2px;
+}
+
+.btn-add-custom {
+    padding: 0.625rem 1.25rem !important;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important; 
+}
+
+.week-pagination-group {
+    display: flex;
+    gap: 0.375rem;
+}
+
+.btn-week-nav {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(229, 231, 235, 0.8);
+    border-radius: 6px;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+    transition: background-color 150ms ease;
+}
+
+.btn-week-nav:hover {
+    background-color: var(--gray-50);
+}
+
+/* --- CỤM CHỌN NGÀY & CHÚ THÍCH TRẠNG THÁI --- */
+.schedule-control-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.25rem;
+}
+
+.days-nav-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.days-nav-row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.day-text-item {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--brand-dark, #0B2B22);
+    cursor: pointer;
+    padding-bottom: 2px;
+    transition: opacity 150ms ease;
+}
+
+.day-text-item:hover {
+    opacity: 0.8;
+}
+
+.day-text-item.active {
+    border-bottom: 2px solid var(--brand-dark, #0B2B22);
+}
+
+.status-legend-inline {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.legend-txt {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--brand-dark, #0B2B22);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.legend-dadat {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+}
+
+.legend-dangchon {
+    background-color: #C8F05A  ;
+    color: #0B2B22;
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    border: 1px solid #D1DED0;
+}
+
+.legend-bichan {
+    color: #A14B00;
+    font-weight: 700;
+}
+
+.icon-clock-xs {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2.2;
+}
+
+/* --- BẢNG LỊCH MA TRẬN CHÍNH --- */
+.schedule-table-card {
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.schedule-card-header {
+    margin-bottom: 1rem;
+}
+
+.schedule-card-header h3 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--brand-dark, #0B2B22);
+}
+
+.schedule-grid-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 6px;
+}
+
+.schedule-grid-table th {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.schedule-grid-table th.th-left {
+    text-align: left;
+    width: 60px;
+}
+
+.td-court-name {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--brand-dark, #0B2B22);
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Thiết kế từng ô slot giờ */
+.slot-box {
+    border-radius: 8px;
+    padding: 0.5rem 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    cursor: pointer;
+    transition: transform 100ms ease, opacity 100ms ease;
+}
+
+.slot-box:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.slot-box span {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.slot-box small {
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* 1. Các ô trống */
+.slot-trong {
+    background-color: #EAF0E8;
+    border: 1px solid #D1DED0;
+    color: #2C4A3E;
+}
+.slot-trong small { color: #557065; }
+
+/* 2. Các ô đang chọn */
+.slot-dangchon {
+    background-color: #EAF0E8;
+    border: 1px solid #0B2B22;
+    color: #0B2B22;
+}
+.slot-dangchon small { color: #0B2B22; font-weight: 600; }
+
+/* 3. Các ô bảo trì (Đã đổi sang màu #FFF3D6) */
+.slot-baotri {
+    background-color: #FFF3D6;
+    border: 1px solid #F5E0B7;
+    color: #8C5810;
+}
+.slot-baotri small { color: #8C5810; }
+
+.schedule-footer-note {
+    font-size: 11px;
+    color: var(--gray-500);
+    margin-top: 0.75rem;
+    border-top: 1px solid var(--gray-100);
+    padding-top: 0.75rem;
+}
+
+/* --- BỐ CỤC 2 CỘT PHÍA DƯỚI --- */
+.bottom-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: start;
+}
+
+@media (min-width: 1024px) {
+    .bottom-grid-layout {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+    .detail-slot-card {
+        grid-column: span 5 / span 5;
+    }
+    .recurring-form-card {
+        grid-column: span 7 / span 7;
+    }
+}
+
+.detail-slot-card, .recurring-form-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.badge-code {
+    background-color: #EAF0E8;
+    color: #0B2B22;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0.25rem 0.625rem;
+    border-radius: 6px;
+    border: 1px solid #D1DED0;
+}
+
+.slot-info-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.slot-time-title {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--brand-dark, #0B2B22);
+}
+
+.slot-customer-info {
+    font-size: 0.8125rem;
+    color: var(--gray-600);
+}
+
+.slot-actions-row {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.warning-alert-box {
+    background-color: #EAF0E8;
+    border: 1px solid #D1DED0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 11px;
+    color: #0B2B22;
+    line-height: 1.4;
+}
+
+/* Form Tạo / Chỉnh sửa lịch lặp */
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .form-row-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray-500);
+    display: block;
+    margin-bottom: 0.375rem;
+}
+
+.model-input {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    font-size: 0.75rem;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: var(--gray-800);
+    font-weight: 400;
+}
+
+/* Hộp cảnh báo xung đột (Đã đổi sang màu #FFF3D6) */
+.conflict-notice-box {
+    background-color: #FFF3D6;
+    border: 1px solid #F5E0B7;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 11px;
+    color: #8C5810;
+    line-height: 1.4;
+}
+
+.btn-styled-box {
+    padding: 0.5rem 1.25rem !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+}

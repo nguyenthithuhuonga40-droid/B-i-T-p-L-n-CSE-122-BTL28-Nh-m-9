@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourtConnect - Chi tiết đơn CC-1010</title>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="chusan_chitietdon.css">
+</head>
+<body class="page-body">
+
+    <!-- Top Navigation Header -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-grid">
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+                <div class="logo-dot"></div>
+            </div>
+            <span class="logo-text">CourtConnect</span>
+        </div>
+
+        <div class="owner-info">
+            <span>Chủ sân</span>
+            <span class="separator">-</span>
+            <span class="owner-name">Tuấn Phong</span>
+            <i data-lucide="chevron-down" class="icon-sm text-gray"></i>
+        </div>
+
+        <div class="header-right">
+            <button class="icon-button">
+                <i data-lucide="bell" class="icon-md"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="venue-title">Tây Hồ Sports</h2>
+
+            <nav class="nav-list">
+                <div><a href="chusan_tongquan.html" class="nav-link">Tổng quan</a></div>
+                <div><a href="chusan_quanlysan.html" class="nav-link">Quản lý sân</a></div>
+                <div><a href="chusan_lichkhunggio.html" class="nav-link">Lịch & khung giờ</a></div>
+                <div><a href="chusan_dondatsan.html" class="nav-btn-active">Đơn đặt sân</a></div>
+                <div><a href="chusan_thongbao.html" class="nav-link">Thông báo</a></div>
+
+                <div class="sidebar-footer">
+                    <p>Dữ liệu minh họa • 10/2026</p>
+                    <a href="#" class="help-link">Trợ giúp & phản hồi <i data-lucide="arrow-up-right" class="icon-xs"></i></a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            
+            <!-- Page Header Section -->
+            <div class="page-header-model">
+                <div>
+                    <div class="breadcrumb">CHỦ SÂN <span class="breadcrumb-sep">/</span> COURTCONNECT</div>
+                    <h1 class="page-title">CC-1010 · Nguyễn Minh Anh</h1>
+                    <p class="page-subtitle">Tây Hồ Sports - P01 · 10/10/2026 · 16:00–18:00</p>
+                </div>
+                <div class="add-btn-container-row">
+                    <button class="btn-primary btn-print-custom" id="btnPrintOrder">In thông tin đơn</button>
+                </div>
+            </div>
+
+            <!-- Top Grid Section (Thông tin đơn + Tại quầy) -->
+            <div class="detail-top-grid">
+                
+                <!-- Left Column: Order Main Info & Audit Log -->
+                <div class="left-detail-col">
+                    
+                    <!-- Card 1: Thông tin đơn -->
+                    <div class="card detail-info-card">
+                        <h3 class="card-section-title">Thông tin đơn</h3>
+                        
+                        <!-- Badges Status Bar -->
+                        <div class="badges-status-bar">
+                            <span class="status-badge badge-green">Đã xác nhận</span>
+                            <span class="status-badge badge-gray">Chưa nhận sân</span>
+                            <span class="status-badge badge-amber"><i data-lucide="clock" class="icon-badge"></i> Thanh toán mô phỏng</span>
+                        </div>
+
+                        <!-- Customer & Sport Details Row -->
+                        <div class="detail-fields-row">
+                            <div class="detail-field-group">
+                                <span class="field-label-small">NGƯỜI ĐẶT</span>
+                                <h4 class="field-value-bold">Nguyễn Minh Anh</h4>
+                                <p class="field-subtext">090 123 4567 · minhanh@example.com</p>
+                            </div>
+
+                            <div class="detail-field-group">
+                                <span class="field-label-small">BUỔI CHƠI</span>
+                                <h4 class="field-value-bold">Pickleball · 4 người</h4>
+                                <p class="field-subtext">Đức Huy, Thu Hà, Quốc Bảo</p>
+                            </div>
+                        </div>
+
+                        <div class="divider-line"></div>
+
+                        <!-- Payment Financial Lines -->
+                        <div class="price-summary-table">
+                            <div class="price-row">
+                                <span class="price-label">Tiền sân · 2 × 180.000đ</span>
+                                <span class="price-value-bold">360.000đ</span>
+                            </div>
+                            <div class="price-row">
+                                <span class="price-label">Phí dịch vụ</span>
+                                <span class="price-value">0đ</span>
+                            </div>
+                        </div>
+
+                        <p class="note-footer-text">Ghi chú: Nhóm tự mang vợt. Xin hướng dẫn chỗ gửi xe.</p>
+                    </div>
+
+                    <!-- Card 2: Nhật ký xử lý -->
+                    <div class="card detail-log-card">
+                        <h3 class="card-section-title">Nhật ký xử lý</h3>
+                        <ul class="audit-log-list">
+                            <li>09/10 · 10:02 — Minh Anh tạo đơn.</li>
+                            <li>09/10 · 10:03 — Ghi nhận thanh toán mô phỏng 360.000đ.</li>
+                            <li>09/10 · 10:15 — Tuấn Phong xác nhận đơn.</li>
+                            <li>10/10 · 15:50 — Dự kiến người chơi đến nhận sân.</li>
+                        </ul>
+                        <p class="log-footer-muted">Mọi thay đổi cần ghi người thực hiện và lý do.</p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Tại quầy Actions Card -->
+                <div class="right-counter-col">
+                    <div class="card counter-card">
+                        <h3 class="card-section-title">Tại quầy</h3>
+                        
+                        <div class="counter-time-display">
+                            <span class="large-time-num">16:00</span>
+                            <span class="sub-time-str">10/10 · P01 · 2 giờ</span>
+                        </div>
+
+                        <div class="counter-primary-actions">
+                            <button class="btn-primary-dark-pill" id="btnConfirmCheckin">Xác nhận đã nhận sân</button>
+                            <button class="btn-disabled-pill" disabled>Đánh dấu hoàn thành</button>
+                        </div>
+
+                        <p class="counter-notice-text">
+                            Hoàn thành được mở sau khi nhận sân và kết thúc buổi chơi.
+                        </p>
+
+                        <div class="divider-line-light"></div>
+
+                        <div class="counter-secondary-actions">
+                            <button class="btn-pill-outline" id="btnEditReschedule">Chỉnh sửa / đổi lịch</button>
+                            <button class="btn-pill-danger" id="btnCancelBooking">Hủy đơn</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Variant Cards Grid -->
+            <div class="detail-variants-grid">
+                
+                <!-- Variant Card 1: Biến thể · Duyệt đơn chờ CC-1011 -->
+                <div class="card variant-card">
+                    <h3 class="card-section-title">Biến thể · Duyệt đơn chờ CC-1011</h3>
+                    <div class="variant-status-badge">
+                        <i data-lucide="clock" class="icon-badge"></i> Chờ duyệt
+                    </div>
+
+                    <p class="variant-order-desc">
+                        Quốc Bảo · P04 · 20:00–22:00 · 360.000đ
+                    </p>
+
+                    <div class="form-group-box">
+                        <label class="input-label-sm">Lý do nếu từ chối *</label>
+                        <input type="text" class="input-text-model" placeholder="Nhập lý do rõ ràng cho người đặt..." id="rejectReasonInput">
+                        <span class="input-helper-text">Bắt buộc nhập khi chọn Từ chối; không dùng điểm AI làm lý do duy nhất.</span>
+                    </div>
+
+                    <div class="variant-btn-row">
+                        <button class="btn-primary-dark-pill btn-sm-custom" id="btnApprovePending">Duyệt đơn</button>
+                        <button class="btn-pill-danger btn-sm-custom" id="btnRejectPending">Từ chối có lý do</button>
+                    </div>
+                </div>
+
+                <!-- Variant Card 2: Biến thể · Đổi lịch / hủy & hoàn tiền -->
+                <div class="card variant-card">
+                    <h3 class="card-section-title">Biến thể · Đổi lịch / hủy & hoàn tiền</h3>
+
+                    <div class="inputs-two-col">
+                        <div class="input-field-card">
+                            <label class="input-label-sm">Ngày mới</label>
+                            <input type="text" value="11/10/2026" class="input-text-model">
+                        </div>
+                        <div class="input-field-card">
+                            <label class="input-label-sm">Giờ mới</label>
+                            <input type="text" value="16:00–18:00" class="input-text-model">
+                        </div>
+                    </div>
+
+                    <div class="input-field-card">
+                        <label class="input-label-sm">Lý do thay đổi</label>
+                        <input type="text" value="Người chơi yêu cầu đổi lịch" class="input-text-model">
+                    </div>
+
+                    <div class="variant-btn-row">
+                        <button class="btn-primary-dark-pill btn-sm-custom" id="btnCheckAndSaveReschedule">Kiểm tra & lưu lịch</button>
+                        <button class="btn-pill-danger btn-sm-custom" id="btnConfirmRefund">Xác nhận hủy</button>
+                    </div>
+
+                    <div class="info-soft-green-box">
+                        Hủy trước 24 giờ: hoàn 360.000đ. Trạng thái hoàn tiền mô phỏng: Chờ xử lý → Đã hoàn.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Info Banner -->
+            <div class="info-banner-gray">
+                Sau nhận sân: Đang chơi. Sau kết thúc: Hoàn thành. Không tự ghi nhận vắng mặt từ đề xuất AI.
+            </div>
+
+            <footer class="page-footer">
+                Thiết kế minh họa • CourtConnect • Hà Nội • Không thực hiện giao dịch thật
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="chusan_chitietdon.js"></script>
+</body>
+</html>
