@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#103f32">
+    <title>Đăng ký | CourtConnect</title>
+    <link rel="stylesheet" href="dangky.css">
+    <script src="auth.js" defer></script>
+    <script src="dangky.js" defer></script>
+</head>
+<body>
+    <main class="trang-dang-ky">
+        <section class="gioi-thieu-dang-ky" aria-label="Giới thiệu CourtConnect">
+            <a class="logo-dang-ky" href="khampha.html" aria-label="CourtConnect - Trang chủ">
+                <span class="logo-bieu-tuong-dang-ky" aria-hidden="true">▥</span>
+                <span>CourtConnect</span>
+            </a>
+
+            <div class="noi-dung-gioi-thieu-dang-ky">
+                <h1>Một cú chạm.<br>Một trận hay.</h1>
+                <p class="mo-ta-gioi-thieu-dang-ky">Đặt sân, gặp đúng người và dành nhiều thời gian hơn cho điều bạn yêu thích.</p>
+                <img
+                    class="anh-san-choi-dang-ky"
+                    src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+                    alt="Người chơi thể thao trên sân ngoài trời"
+                    fetchpriority="high">
+                <p class="the-loai-dang-ky">PICKLEBALL&nbsp; / &nbsp;CẦU LÔNG&nbsp; / &nbsp;CỘNG ĐỒNG</p>
+                <p class="loi-chao-dang-ky">Bắt đầu từ Hà Nội. Kết nối qua từng trận đấu.</p>
+            </div>
+        </section>
+
+        <section class="khu-vuc-dang-ky" aria-labelledby="tieu-de-dang-ky">
+            <div class="noi-dung-dang-ky">
+                <a class="quay-lai-dang-ky" href="khampha.html">← Về trang khám phá</a>
+                <h2 id="tieu-de-dang-ky">Gia nhập nhịp chơi mới.</h2>
+                <p class="mo-ta-form-dang-ky">Tạo tài khoản để đặt sân và kết nối cộng đồng.</p>
+                <p class="ghi-chu-demo-dang-ky">Bản demo chỉ lưu tài khoản trong trình duyệt hiện tại; không dùng mật khẩu thật.</p>
+
+                <form id="form-dang-ky" novalidate>
+                    <fieldset class="chon-vai-tro">
+                        <legend>Bạn muốn tham gia với vai trò nào?</legend>
+                        <div class="cac-vai-tro">
+                            <label class="lua-chon-vai-tro">
+                                <input type="radio" name="vaiTro" value="nguoi-choi" checked>
+                                <span>Người chơi</span>
+                            </label>
+                            <label class="lua-chon-vai-tro">
+                                <input type="radio" name="vaiTro" value="chu-san">
+                                <span>Chủ sân</span>
+                            </label>
+                            <label class="lua-chon-vai-tro">
+                                <input type="radio" name="vaiTro" value="dieu-phoi-clb">
+                                <span>Điều phối CLB</span>
+                            </label>
+                        </div>
+                        <p class="ghi-chu-vai-tro">Quản trị viên chỉ được mời bởi người có quyền quản lý. <a href="dangnhap.html?vaiTro=quan-tri-vien">Dùng tài khoản quản trị demo</a></p>
+                    </fieldset>
+                    <div class="dien-nhanh-demo">
+                        <span>Điền nhanh hồ sơ đăng ký thử:</span>
+                        <button type="button" data-demo-signup="nguoi-choi">Người chơi</button>
+                        <button type="button" data-demo-signup="chu-san">Chủ sân</button>
+                        <button type="button" data-demo-signup="dieu-phoi-clb">Điều phối CLB</button>
+                    </div>
+
+                    <div class="luoi-truong-dang-ky">
+                        <div class="truong-dang-ky">
+                            <label for="ho-ten">Họ và tên <span aria-hidden="true">*</span></label>
+                            <input id="ho-ten" name="hoTen" type="text" autocomplete="name" placeholder="Nguyễn Minh Anh" required aria-describedby="loi-ho-ten">
+                            <small class="loi-truong-dang-ky" id="loi-ho-ten"></small>
+                        </div>
+                        <div class="truong-dang-ky">
+                            <label for="so-dien-thoai">Số điện thoại <span aria-hidden="true">*</span></label>
+                            <input id="so-dien-thoai" name="soDienThoai" type="tel" autocomplete="tel" inputmode="tel" placeholder="090 123 4567" required aria-describedby="loi-so-dien-thoai">
+                            <small class="loi-truong-dang-ky" id="loi-so-dien-thoai"></small>
+                        </div>
+                        <div class="truong-dang-ky truong-rong">
+                            <label for="email-dang-ky">Email <span aria-hidden="true">*</span></label>
+                            <input id="email-dang-ky" name="email" type="email" autocomplete="email" placeholder="minhanh@example.com" required aria-describedby="loi-email-dang-ky">
+                            <small class="loi-truong-dang-ky" id="loi-email-dang-ky"></small>
+                        </div>
+                        <div class="truong-dang-ky">
+                            <label for="mat-khau-dang-ky">Mật khẩu <span aria-hidden="true">*</span></label>
+                            <input id="mat-khau-dang-ky" name="matKhau" type="password" autocomplete="new-password" placeholder="Tạo mật khẩu" minlength="8" required aria-describedby="goi-y-mat-khau loi-mat-khau-dang-ky">
+                            <small class="goi-y-truong">Ít nhất 8 ký tự, gồm chữ và số.</small>
+                            <small class="loi-truong-dang-ky" id="loi-mat-khau-dang-ky"></small>
+                        </div>
+                        <div class="truong-dang-ky">
+                            <label for="xac-nhan-mat-khau">Nhập lại mật khẩu <span aria-hidden="true">*</span></label>
+                            <input id="xac-nhan-mat-khau" name="xacNhanMatKhau" type="password" autocomplete="new-password" placeholder="Nhập lại mật khẩu" required aria-describedby="loi-xac-nhan-mat-khau">
+                            <small class="loi-truong-dang-ky" id="loi-xac-nhan-mat-khau"></small>
+                        </div>
+                    </div>
+
+                    <section class="mon-the-thao" aria-labelledby="tieu-de-mon-the-thao">
+                        <h3 id="tieu-de-mon-the-thao">Môn thể thao &amp; trình độ tự đánh giá</h3>
+                        <div class="chon-mon" aria-label="Chọn môn thể thao">
+                            <label class="the-mon">
+                                <input type="checkbox" name="monTheThao" value="pickleball" checked>
+                                <span>✓ Pickleball</span>
+                            </label>
+                            <label class="the-mon">
+                                <input type="checkbox" name="monTheThao" value="cau-long" checked>
+                                <span>✓ Cầu lông</span>
+                            </label>
+                        </div>
+                        <div class="luoi-trinh-do">
+                            <div class="truong-dang-ky truong-trinh-do" data-mon="pickleball">
+                                <label for="trinh-do-pickleball">Pickleball</label>
+                                <select id="trinh-do-pickleball" name="trinhDoPickleball">
+                                    <option value="2.0">2.0 · Mới bắt đầu</option>
+                                    <option value="3.0" selected>3.0 · Trung cấp</option>
+                                    <option value="4.0">4.0 · Khá</option>
+                                    <option value="5.0">5.0 · Nâng cao</option>
+                                </select>
+                            </div>
+                            <div class="truong-dang-ky truong-trinh-do" data-mon="cau-long">
+                                <label for="trinh-do-cau-long">Cầu lông</label>
+                                <select id="trinh-do-cau-long" name="trinhDoCauLong">
+                                    <option value="moi-bat-dau">Mới bắt đầu</option>
+                                    <option value="trung-binh" selected>Trung bình</option>
+                                    <option value="kha">Khá</option>
+                                    <option value="nang-cao">Nâng cao</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p class="goi-y-mon">Bạn có thể sửa trình độ bất cứ lúc nào trong hồ sơ.</p>
+                        <small class="loi-truong-dang-ky loi-mon" id="loi-mon-the-thao"></small>
+                    </section>
+
+                    <label class="dong-y-dieu-khoan">
+                        <input id="dong-y" name="dongY" type="checkbox" required>
+                        <span>Tôi đồng ý <a href="#dieu-khoan">Điều khoản sử dụng</a> và <a href="#quyen-rieng-tu">Quyền riêng tư</a>.</span>
+                    </label>
+                    <small class="loi-truong-dang-ky loi-dieu-khoan" id="loi-dong-y"></small>
+
+                    <button class="nut-tao-tai-khoan" type="submit">Tạo tài khoản <span aria-hidden="true">→</span></button>
+                    <p class="thong-bao-dang-ky" id="thong-bao-dang-ky" role="status" aria-live="polite"></p>
+                </form>
+
+                <p class="ghi-chu-sau-form">Đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a></p>
+                <nav class="lien-ket-phu-dang-ky" aria-label="Liên kết hỗ trợ">
+                    <a href="#dieu-khoan">Điều khoản sử dụng</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="#quyen-rieng-tu">Quyền riêng tư</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="khampha.html#cong-dong">Trợ giúp</a>
+                </nav>
+            </div>
+        </section>
+    </main>
+    <script src="dieu-huong-vai-tro.js"></script>
+</body>
+</html>

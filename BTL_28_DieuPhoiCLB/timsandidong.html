@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Tìm sân gần bạn | CourtConnect</title>
+    <link rel="stylesheet" href="timsandidong.css">
+    <script src="timsandidong.js" defer></script>
+</head>
+<body>
+    <header class="thanh-dau-trang">
+        <a class="logo" href="khampha.html" aria-label="CourtConnect - Trang chủ">
+            <span aria-hidden="true">▥</span> CourtConnect
+        </a>
+        <a class="nut-thong-bao" href="thongbao.html" aria-label="Thông báo">♧</a>
+    </header>
+
+    <main class="noi-dung-trang">
+        <section class="dau-trang">
+            <h1>Ra sân gần bạn.</h1>
+            <p>Chọn môn, chọn giờ. Tìm một sân vừa ý ở Hà Nội.</p>
+        </section>
+
+        <nav class="bo-loc-mon" aria-label="Lọc theo môn thể thao">
+            <button class="tab-mon dang-chon" type="button" data-mon="tat-ca" aria-pressed="true">Tất cả</button>
+            <button class="tab-mon" type="button" data-mon="pickleball" aria-pressed="false">Pickleball</button>
+            <button class="tab-mon" type="button" data-mon="cau-long" aria-pressed="false">Cầu lông</button>
+        </nav>
+
+        <form class="form-tim-san" id="form-tim-san">
+            <div class="truong-tim-san truong-khu-vuc">
+                <label for="khu-vuc">Khu vực</label>
+                <select id="khu-vuc" name="khuVuc">
+                    <option value="ha-noi" selected>Hà Nội</option>
+                    <option value="tay-ho">Tây Hồ</option>
+                    <option value="cau-giay">Cầu Giấy</option>
+                    <option value="long-bien">Long Biên</option>
+                </select>
+            </div>
+            <div class="hang-ngay-gio">
+                <div class="truong-tim-san">
+                    <label for="ngay-choi">Ngày chơi</label>
+                    <input id="ngay-choi" name="ngayChoi" type="date" value="2026-10-10">
+                </div>
+                <div class="truong-tim-san">
+                    <label for="gio-choi">Giờ</label>
+                    <select id="gio-choi" name="gioChoi">
+                        <option value="16-20" selected>16:00–20:00</option>
+                        <option value="07-10">07:00–10:00</option>
+                        <option value="10-16">10:00–16:00</option>
+                        <option value="18-22">18:00–22:00</option>
+                    </select>
+                </div>
+            </div>
+            <button class="nut-tim-san" type="submit">Tìm sân <span aria-hidden="true">→</span></button>
+        </form>
+
+        <section class="ket-qua-tim-san" aria-labelledby="tieu-de-ket-qua">
+            <div class="dau-ket-qua">
+                <h2 id="tieu-de-ket-qua"><span id="so-dia-diem">3</span> địa điểm phù hợp</h2>
+                <button class="nut-bo-loc" id="nut-bo-loc" type="button" aria-expanded="false" aria-controls="tuy-chon-bo-loc">Bộ lọc</button>
+            </div>
+
+            <div class="tuy-chon-bo-loc" id="tuy-chon-bo-loc" hidden>
+                <label for="sap-xep">Sắp xếp</label>
+                <select id="sap-xep" name="sapXep">
+                    <option value="goi-y">Phù hợp nhất</option>
+                    <option value="gia-tang">Giá thấp đến cao</option>
+                    <option value="gia-giam">Giá cao đến thấp</option>
+                </select>
+            </div>
+
+            <div class="danh-sach-san" id="danh-sach-san">
+                <article class="the-san" data-mon="pickleball" data-khu-vuc="tay-ho" data-gia="180000" data-san="tay-ho">
+                    <img
+                        src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                        alt="Sân pickleball ngoài trời với nhiều sân chơi"
+                        loading="lazy">
+                    <div class="noi-dung-the-san">
+                        <div class="dong-the-loai">
+                            <span>Pickleball</span>
+                            <button class="nut-yeu-thich" type="button" aria-label="Lưu Tây Hồ Sports" aria-pressed="false">♡</button>
+                        </div>
+                        <h3>Tây Hồ Sports</h3>
+                        <p class="dia-chi-san">Tây Hồ, Hà Nội · Ngoài trời · 4 sân</p>
+                        <p class="san-trong">✓ Còn giờ trống ngày 10/10</p>
+                        <div class="dong-gia-san">
+                            <strong>180.000đ <small>/ giờ</small></strong>
+                            <a class="nut-xem-san" href="sangiodidong.html?ngay=2026-10-10">Xem sân</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="the-san" data-mon="cau-long" data-khu-vuc="cau-giay" data-gia="120000" data-san="cau-giay">
+                    <img
+                        src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                        alt="Sân cầu lông trong nhà"
+                        loading="lazy">
+                    <div class="noi-dung-the-san">
+                        <div class="dong-the-loai">
+                            <span>Cầu lông</span>
+                            <button class="nut-yeu-thich" type="button" aria-label="Lưu Cầu Giấy Racket Club" aria-pressed="false">♡</button>
+                        </div>
+                        <h3>Cầu Giấy Racket Club</h3>
+                        <p class="dia-chi-san">Cầu Giấy, Hà Nội · Trong nhà · 6 sân</p>
+                        <p class="san-trong">✓ Còn giờ trống ngày 10/10</p>
+                        <div class="dong-gia-san">
+                            <strong>120.000đ <small>/ giờ</small></strong>
+                            <a class="nut-xem-san" href="sangiodidong.html">Xem sân</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="the-san san-mo-rong" data-mon="pickleball" data-khu-vuc="long-bien" data-gia="160000" data-san="long-bien" hidden>
+                    <img
+                        src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                        alt="Sân pickleball ngoài trời tại Long Biên"
+                        loading="lazy">
+                    <div class="noi-dung-the-san">
+                        <div class="dong-the-loai">
+                            <span>Pickleball</span>
+                            <button class="nut-yeu-thich" type="button" aria-label="Lưu Long Biên Pickle Hub" aria-pressed="false">♡</button>
+                        </div>
+                        <h3>Long Biên Pickle Hub</h3>
+                        <p class="dia-chi-san">Long Biên, Hà Nội · Ngoài trời · 4 sân</p>
+                        <p class="san-trong">✓ Còn giờ trống ngày 10/10</p>
+                        <div class="dong-gia-san">
+                            <strong>160.000đ <small>/ giờ</small></strong>
+                            <a class="nut-xem-san" href="sangiodidong.html">Xem sân</a>
+                        </div>
+                    </div>
+                </article>
+
+                <p class="khong-co-san" id="khong-co-san" hidden>Không tìm thấy sân phù hợp với bộ lọc này.</p>
+            </div>
+
+            <p class="ghi-chu-du-lieu">Đang hiển thị <span id="so-san-hien-thi">2</span>/3 sân · Dữ liệu minh họa</p>
+            <button class="nut-xem-them" id="nut-xem-them" type="button">Xem thêm Long Biên Pickle Hub</button>
+        </section>
+    </main>
+
+    <nav class="thanh-dieu-huong-duoi" aria-label="Điều hướng dưới">
+        <a class="muc-duoi dang-chon" href="timsandidong.html" aria-current="page">
+            <span aria-hidden="true">⌕</span><span>Tìm sân</span>
+        </a>
+        <a class="muc-duoi" href="trandidong.html">
+            <span aria-hidden="true">♧</span><span>Trận mở</span>
+        </a>
+        <a class="muc-duoi" href="lichthethao.html">
+            <span aria-hidden="true">▦</span><span>Của tôi</span>
+        </a>
+        <a class="muc-duoi" href="hoso.html">
+            <span aria-hidden="true">♙</span><span>Hồ sơ</span>
+        </a>
+    </nav>
+    <script src="dieu-huong-vai-tro.js"></script>
+</body>
+</html>

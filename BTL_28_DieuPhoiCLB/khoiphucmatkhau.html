@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#103f32">
+    <title>Khôi phục mật khẩu | CourtConnect</title>
+    <link rel="stylesheet" href="khoiphucmatkhau.css">
+    <script src="khoiphucmatkhau.js" defer></script>
+</head>
+<body>
+    <main class="trang-khoi-phuc">
+        <section class="gioi-thieu-khoi-phuc" aria-label="Giới thiệu CourtConnect">
+            <a class="logo-khoi-phuc" href="khampha.html" aria-label="CourtConnect - Trang chủ">
+                <span class="logo-bieu-tuong-khoi-phuc" aria-hidden="true">▥</span>
+                <span>CourtConnect</span>
+            </a>
+
+            <div class="noi-dung-gioi-thieu-khoi-phuc">
+                <h1>Một cú chạm.<br>Một trận hay.</h1>
+                <p class="mo-ta-gioi-thieu-khoi-phuc">Đặt sân, gặp đúng người và dành nhiều thời gian hơn cho điều bạn yêu thích.</p>
+                <img
+                    class="anh-san-choi-khoi-phuc"
+                    src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+                    alt="Người chơi thể thao trên sân ngoài trời"
+                    fetchpriority="high">
+                <p class="the-loai-khoi-phuc">PICKLEBALL&nbsp; / &nbsp;CẦU LÔNG&nbsp; / &nbsp;CỘNG ĐỒNG</p>
+                <p class="loi-chao-khoi-phuc">Bắt đầu từ Hà Nội. Kết nối qua từng trận đấu.</p>
+            </div>
+        </section>
+
+        <section class="khu-vuc-khoi-phuc" aria-labelledby="tieu-de-khoi-phuc">
+            <div class="noi-dung-khoi-phuc">
+                <a class="quay-lai-kham-pha" href="khampha.html">← Về trang khám phá</a>
+                <h2 id="tieu-de-khoi-phuc">Trở lại sân, thật dễ.</h2>
+                <p class="mo-ta-form-khoi-phuc">Nhập email đã dùng để tạo tài khoản CourtConnect.</p>
+
+                <form id="form-khoi-phuc" novalidate>
+                    <div class="truong-email-khoi-phuc">
+                        <label for="email-khoi-phuc">Email tài khoản</label>
+                        <input
+                            id="email-khoi-phuc"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            placeholder="minhanh@example.com"
+                            required
+                            aria-describedby="goi-y-email loi-email-khoi-phuc">
+                        <small class="goi-y-email" id="goi-y-email">Kiểm tra email trước khi gửi yêu cầu.</small>
+                        <small class="loi-email-khoi-phuc" id="loi-email-khoi-phuc"></small>
+                    </div>
+
+                    <button class="nut-gui-khoi-phuc" type="submit">Gửi liên kết khôi phục</button>
+                </form>
+
+                <a class="quay-lai-dang-nhap" href="dangnhap.html">← Quay lại đăng nhập</a>
+
+                <section class="trang-thai-khoi-phuc" id="trang-thai-khoi-phuc" aria-labelledby="tieu-de-trang-thai" hidden>
+                    <h3 id="tieu-de-trang-thai">Trạng thái sau khi gửi</h3>
+                    <span class="nhan-trang-thai" id="nhan-trang-thai">Đã ghi nhận yêu cầu</span>
+                    <div class="huong-dan-hop-thu">
+                        <h4>Kiểm tra hộp thư của bạn</h4>
+                        <p>Nếu email này có tài khoản, hướng dẫn đặt lại mật khẩu sẽ được gửi đến hộp thư. Kiểm tra cả thư mục spam.</p>
+                    </div>
+                    <p class="ghi-chu-mo-phong">Đây là bản minh họa giao diện; chưa có email thật được gửi vì trang chưa kết nối máy chủ.</p>
+                    <button class="nut-gui-lai" id="nut-gui-lai" type="button" disabled>Gửi lại sau 60 giây</button>
+                    <button class="nut-doi-email" id="nut-doi-email" type="button">Dùng email khác</button>
+                </section>
+
+                <nav class="lien-ket-phu-khoi-phuc" aria-label="Liên kết hỗ trợ">
+                    <a href="#dieu-khoan">Điều khoản sử dụng</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="#quyen-rieng-tu">Quyền riêng tư</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="khampha.html#cong-dong">Trợ giúp</a>
+                </nav>
+            </div>
+        </section>
+    </main>
+    <script src="dieu-huong-vai-tro.js"></script>
+</body>
+</html>

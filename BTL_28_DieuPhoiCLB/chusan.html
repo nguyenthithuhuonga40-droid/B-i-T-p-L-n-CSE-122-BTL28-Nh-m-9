@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f6f0">
+    <meta name="description" content="Quản lý lịch đặt sân dành cho chủ sân CourtConnect.">
+    <title>Quản lý sân | CourtConnect</title>
+    <link rel="stylesheet" href="chusan.css">
+    <script src="chusan.js" defer></script>
+</head>
+<body>
+    <header class="thanh-dau-trang">
+        <a class="logo" href="index.html"><span aria-hidden="true">▥</span> CourtConnect</a>
+        <div class="thong-tin-vai-tro"><span>Không gian chủ sân</span><a href="khampha.html">Về Khám phá</a></div>
+    </header>
+
+    <main class="noi-dung">
+        <p class="duong-dan">CHỦ SÂN / TÂY HỒ SPORTS</p>
+        <section class="dau-trang">
+            <div>
+                <p class="nhan-muc">QUẢN LÝ ĐẶT SÂN</p>
+                <h1>Lịch sân trong tầm tay.</h1>
+                <p>Xem yêu cầu đặt sân và xác nhận lịch tại Tây Hồ Sports.</p>
+            </div>
+            <a class="nut-xem-san" href="sangiodidong.html">Xem trang sân ↗</a>
+        </section>
+
+        <section class="cac-so-lieu" aria-label="Tổng quan đặt sân">
+            <article><span>Chờ xác nhận</span><strong id="so-cho-xac-nhan">0</strong></article>
+            <article><span>Đã xác nhận</span><strong id="so-da-xac-nhan">0</strong></article>
+            <article><span>Đã từ chối</span><strong id="so-da-tu-choi">0</strong></article>
+        </section>
+
+        <section class="khung-dat-san" aria-labelledby="tieu-de-dat-san">
+            <div class="dau-khung">
+                <div>
+                    <h2 id="tieu-de-dat-san">Yêu cầu đặt sân</h2>
+                    <p>Dữ liệu minh họa được lưu trên trình duyệt hiện tại.</p>
+                </div>
+                <label class="bo-loc">Trạng thái
+                    <select id="loc-trang-thai">
+                        <option value="tat-ca">Tất cả yêu cầu</option>
+                        <option value="cho-xac-nhan">Chờ xác nhận</option>
+                        <option value="da-xac-nhan">Đã xác nhận</option>
+                        <option value="da-tu-choi">Đã từ chối</option>
+                    </select>
+                </label>
+            </div>
+            <p id="thong-bao-chu-san" class="thong-bao" role="status" aria-live="polite"></p>
+            <div class="bang-cuon">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Người đặt</th>
+                            <th scope="col">Lịch sân</th>
+                            <th scope="col">Môn / sân</th>
+                            <th scope="col">Chi phí</th>
+                            <th scope="col">Trạng thái</th>
+                            <th scope="col">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="danh-sach-dat-san"></tbody>
+                </table>
+                <p id="khong-co-yeu-cau" class="khong-co-yeu-cau" hidden>Không có yêu cầu đặt sân phù hợp.</p>
+            </div>
+        </section>
+        <p class="ghi-chu-demo">Đây là giao diện minh họa, chưa kết nối máy chủ hoặc thanh toán thật.</p>
+    </main>
+    <script src="dieu-huong-vai-tro.js"></script>
+</body>
+</html>

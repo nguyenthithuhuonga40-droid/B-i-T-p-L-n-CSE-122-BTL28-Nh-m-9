@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f6f0">
+    <title>Kiến trúc & kiểm kê | CourtConnect</title>
+    <link rel="stylesheet" href="kiemke.css">
+    <script src="kiemke.js" defer></script>
+</head>
+<body>
+    <main class="trang-kiem-ke">
+        <header class="dau-trang">
+            <p class="nhan-dau-trang">COURTCONNECT / KIẾN TRÚC TRẢI NGHIỆM / 01</p>
+            <h1>Từ nhu cầu đến một trận được tổ chức.</h1>
+            <p class="mo-ta-dau-trang">25 màn hình desktop · 4 màn hình di động · 3 bảng tài liệu · Phạm vi thiết kế tĩnh, lớp nội dung chính sửa được</p>
+        </header>
+
+        <aside class="canh-bao" role="note">
+            Phân công SV1 / SV2 / SV3 là đề xuất. Bảng kiểm kê và thiết kế chưa được gắn với dữ liệu. Chưa thực hiện HTML, API, CRUD thật, báo cáo hay tiện ích.
+        </aside>
+
+        <section class="bang-kiem-ke" aria-label="Danh sách 25 màn hình CourtConnect">
+            <div class="cong-cu-bang">
+                <label class="tim-kiem">
+                    <span aria-hidden="true">⌕</span>
+                    <input id="tu-khoa" type="search" placeholder="Tìm màn hình, vai trò, tệp..." autocomplete="off">
+                </label>
+                <label class="loc-vai-tro" for="loc-vai-tro">
+                    <span>Vai trò</span>
+                    <select id="loc-vai-tro">
+                        <option value="">Tất cả vai trò</option>
+                        <option value="Chung">Chung</option>
+                        <option value="Người chơi">Người chơi</option>
+                        <option value="Chủ sân">Chủ sân</option>
+                        <option value="Điều phối CLB">Điều phối CLB</option>
+                        <option value="Quản trị viên">Quản trị viên</option>
+                    </select>
+                </label>
+                <span class="dem-ket-qua" id="dem-ket-qua" aria-live="polite">25/25 màn hình</span>
+            </div>
+            <div class="bang-cuon" tabindex="0" aria-label="Bảng kiểm kê có thể cuộn ngang trên màn hình nhỏ">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Vai trò</th>
+                            <th scope="col">Mục tiêu / nhiệm vụ</th>
+                            <th scope="col">Màn hình</th>
+                            <th scope="col">Tệp dự kiến</th>
+                            <th scope="col">CRUD / nghiệp vụ</th>
+                            <th scope="col">AI liên quan</th>
+                            <th scope="col">Phụ trách đề xuất</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cac-man-hinh">
+                        <tr data-vai-tro="Chung"><td data-label="Vai trò">Chung</td><td data-label="Mục tiêu / nhiệm vụ">Khám phá giải trí / tìm sân</td><td data-label="Màn hình">Khám phá</td><td data-label="Tệp dự kiến">index.html</td><td data-label="CRUD / nghiệp vụ">Đọc · CTA</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Chung"><td data-label="Vai trò">Chung</td><td data-label="Mục tiêu / nhiệm vụ">Truy cập đúng quyền</td><td data-label="Màn hình">Đăng nhập</td><td data-label="Tệp dự kiến">login.html</td><td data-label="CRUD / nghiệp vụ">Hợp lệ / lỗi</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Chung"><td data-label="Vai trò">Chung</td><td data-label="Mục tiêu / nhiệm vụ">Tạo tài khoản &amp; kỹ năng</td><td data-label="Màn hình">Đăng ký</td><td data-label="Tệp dự kiến">register.html</td><td data-label="CRUD / nghiệp vụ">Tạo / kiểm tra</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Chung"><td data-label="Vai trò">Chung</td><td data-label="Mục tiêu / nhiệm vụ">Khôi phục truy cập</td><td data-label="Màn hình">Khôi phục mật khẩu</td><td data-label="Tệp dự kiến">forgot-password.html</td><td data-label="CRUD / nghiệp vụ">Đổi / gửi giả lập</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Chung"><td data-label="Vai trò">Chung</td><td data-label="Mục tiêu / nhiệm vụ">Sửa kỹ năng, lịch, riêng tư</td><td data-label="Màn hình">Hồ sơ &amp; tài khoản</td><td data-label="Tệp dự kiến">profile.html</td><td data-label="CRUD / nghiệp vụ">Đọc / sửa / đồng bộ</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Chung"><td data-label="Vai trò">Chung</td><td data-label="Mục tiêu / nhiệm vụ">Theo dõi &amp; cập nhật</td><td data-label="Màn hình">Thông báo</td><td data-label="Tệp dự kiến">notifications.html</td><td data-label="CRUD / nghiệp vụ">Chưa đọc / đã đọc</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Người chơi"><td data-label="Vai trò">Người chơi</td><td data-label="Mục tiêu / nhiệm vụ">Lọc sân theo môn, giờ, giá</td><td data-label="Màn hình">Tìm sân</td><td data-label="Tệp dự kiến">player-court-search.html</td><td data-label="CRUD / nghiệp vụ">Đọc / lọc / lưu</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Người chơi"><td data-label="Vai trò">Người chơi</td><td data-label="Mục tiêu / nhiệm vụ">Xem sân định &amp; chọn giờ</td><td data-label="Màn hình">Chi tiết sân</td><td data-label="Tệp dự kiến">player-court-detail.html</td><td data-label="CRUD / nghiệp vụ">Đọc / chọn / giữ chỗ</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Người chơi"><td data-label="Vai trò">Người chơi</td><td data-label="Mục tiêu / nhiệm vụ">Xác nhận đơn / thanh toán mô phỏng</td><td data-label="Màn hình">Đặt sân</td><td data-label="Tệp dự kiến">player-booking-checkout.html</td><td data-label="CRUD / nghiệp vụ">Tạo / thanh toán / gửi</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Người chơi"><td data-label="Vai trò">Người chơi</td><td data-label="Mục tiêu / nhiệm vụ">Tìm nhóm cùng kỹ năng, lịch</td><td data-label="Màn hình">Trận mở</td><td data-label="Tệp dự kiến">player-open-matches.html</td><td data-label="CRUD / nghiệp vụ">Đọc / tạo / tìm</td><td data-label="AI liên quan">Skill Match</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Người chơi"><td data-label="Vai trò">Người chơi</td><td data-label="Mục tiêu / nhiệm vụ">Tham gia hoặc từ chối trận</td><td data-label="Màn hình">Chi tiết / lời mời</td><td data-label="Tệp dự kiến">player-match-detail.html</td><td data-label="CRUD / nghiệp vụ">Tạo / cập nhật / hủy</td><td data-label="AI liên quan">Skill Match</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Người chơi"><td data-label="Vai trò">Người chơi</td><td data-label="Mục tiêu / nhiệm vụ">Theo dõi &amp; đánh giá chơi</td><td data-label="Màn hình">Theo dõi của tôi</td><td data-label="Tệp dự kiến">player-my-sports.html</td><td data-label="CRUD / nghiệp vụ">Đọc / sửa / hủy / hoàn thành</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV1</td></tr>
+                        <tr data-vai-tro="Chủ sân"><td data-label="Vai trò">Chủ sân</td><td data-label="Mục tiêu / nhiệm vụ">Xem vận hành &amp; ưu tiên</td><td data-label="Màn hình">Tổng quan</td><td data-label="Tệp dự kiến">venue-overview.html</td><td data-label="CRUD / nghiệp vụ">Đọc / lịch hôm nay</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV2</td></tr>
+                        <tr data-vai-tro="Chủ sân"><td data-label="Vai trò">Chủ sân</td><td data-label="Mục tiêu / nhiệm vụ">Quản lý sân &amp; tiện ích</td><td data-label="Màn hình">Quản lý sân</td><td data-label="Tệp dự kiến">venue-court-management.html</td><td data-label="CRUD / nghiệp vụ">Tạo / đọc / sửa / lưu trữ</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV2</td></tr>
+                        <tr data-vai-tro="Chủ sân"><td data-label="Vai trò">Chủ sân</td><td data-label="Mục tiêu / nhiệm vụ">Lịch hẹn &amp; điều tiết</td><td data-label="Màn hình">Lịch &amp; nguồn sân</td><td data-label="Tệp dự kiến">venue-court-management.html</td><td data-label="CRUD / nghiệp vụ">Đọc / sửa / khóa / xuất</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV2</td></tr>
+                        <tr data-vai-tro="Chủ sân"><td data-label="Vai trò">Chủ sân</td><td data-label="Mục tiêu / nhiệm vụ">Lọc và duyệt đơn</td><td data-label="Màn hình">Đơn đặt sân</td><td data-label="Tệp dự kiến">venue-booking-management.html</td><td data-label="CRUD / nghiệp vụ">Đọc / tạo / hủy / xác nhận</td><td data-label="AI liên quan">No-show Risk</td><td data-label="Phụ trách đề xuất">SV2</td></tr>
+                        <tr data-vai-tro="Chủ sân"><td data-label="Vai trò">Chủ sân</td><td data-label="Mục tiêu / nhiệm vụ">Nhận sân, đổi lịch, hoàn tiền</td><td data-label="Màn hình">Chi tiết vận hành</td><td data-label="Tệp dự kiến">venue-booking-detail.html</td><td data-label="CRUD / nghiệp vụ">Duyệt / từ chối / hủy / hoàn tiền</td><td data-label="AI liên quan">No-show Risk</td><td data-label="Phụ trách đề xuất">SV2</td></tr>
+                        <tr data-vai-tro="Điều phối CLB"><td data-label="Vai trò">Điều phối CLB</td><td data-label="Mục tiêu / nhiệm vụ">Tổ chức hoạt động</td><td data-label="Màn hình">Sự kiện</td><td data-label="Tệp dự kiến">organizer-event-management.html</td><td data-label="CRUD / nghiệp vụ">Đọc / sửa / tạo / hủy</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV3</td></tr>
+                        <tr data-vai-tro="Điều phối CLB"><td data-label="Vai trò">Điều phối CLB</td><td data-label="Mục tiêu / nhiệm vụ">Đăng ký, ghép đội, công bố kết quả</td><td data-label="Màn hình">Chi tiết / tạo sự kiện</td><td data-label="Tệp dự kiến">organizer-event-detail.html</td><td data-label="CRUD / nghiệp vụ">Tạo / sửa / cập nhật / hủy</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV3</td></tr>
+                        <tr data-vai-tro="Điều phối CLB"><td data-label="Vai trò">Điều phối CLB</td><td data-label="Mục tiêu / nhiệm vụ">Mời &amp; quản lý thành viên</td><td data-label="Màn hình">Thành viên</td><td data-label="Tệp dự kiến">organizer-member-management.html</td><td data-label="CRUD / nghiệp vụ">Mời / sửa / khóa / rời chỗ</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV3</td></tr>
+                        <tr data-vai-tro="Điều phối CLB"><td data-label="Vai trò">Điều phối CLB</td><td data-label="Mục tiêu / nhiệm vụ">Cân bằng đội, sửa &amp; công bố</td><td data-label="Màn hình">Xếp đội</td><td data-label="Tệp dự kiến">organizer-team-lineup.html</td><td data-label="CRUD / nghiệp vụ">Tạo / đọc / sửa / lưu / hỗ trợ</td><td data-label="AI liên quan">Team Balancer</td><td data-label="Phụ trách đề xuất">SV3</td></tr>
+                        <tr data-vai-tro="Quản trị viên"><td data-label="Vai trò">Quản trị viên</td><td data-label="Mục tiêu / nhiệm vụ">Chuẩn hóa kỹ năng theo môn</td><td data-label="Màn hình">Môn thể thao</td><td data-label="Tệp dự kiến">admin-sport-management.html</td><td data-label="CRUD / nghiệp vụ">Tạo / đọc / sửa / xóa</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV3</td></tr>
+                        <tr data-vai-tro="Quản trị viên"><td data-label="Vai trò">Quản trị viên</td><td data-label="Mục tiêu / nhiệm vụ">Mở, cập nhật, vô hiệu hóa</td><td data-label="Màn hình">Người dùng</td><td data-label="Tệp dự kiến">admin-user-management.html</td><td data-label="CRUD / nghiệp vụ">Tạo / đọc / sửa / khóa</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV3</td></tr>
+                        <tr data-vai-tro="Quản trị viên"><td data-label="Vai trò">Quản trị viên</td><td data-label="Mục tiêu / nhiệm vụ">Rà soát quyền &amp; dữ liệu</td><td data-label="Màn hình">Chi tiết / rà soát</td><td data-label="Tệp dự kiến">admin-user-detail.html</td><td data-label="CRUD / nghiệp vụ">Đọc / sửa / ghi chú</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV3</td></tr>
+                        <tr data-vai-tro="Quản trị viên"><td data-label="Vai trò">Quản trị viên</td><td data-label="Mục tiêu / nhiệm vụ">Đọc dữ liệu &amp; báo lỗi</td><td data-label="Màn hình">Báo cáo thể thao</td><td data-label="Tệp dự kiến">admin-sports-report.html</td><td data-label="CRUD / nghiệp vụ">Đọc / lọc / tải báo cáo</td><td data-label="AI liên quan">—</td><td data-label="Phụ trách đề xuất">SV3</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="chan-bang"><span id="tong-so-man-hinh">Hiển thị 25/25 màn hình</span> · Trang 1</p>
+        </section>
+
+        <section class="phan-muc" aria-labelledby="tieu-de-luong">
+            <h2 id="tieu-de-luong">Luồng chính · người dùng luôn kiểm soát</h2>
+            <div class="luoi-luong">
+                <article class="the-luong">
+                    <h3>Người chơi</h3>
+                    <ol>
+                        <li>Khám phá → Đăng nhập → Tìm sân / trận</li>
+                        <li>Chọn giờ → Xác nhận đơn / Gửi yêu cầu</li>
+                        <li>Xem trạng thái → Skill Match &amp; lý do</li>
+                        <li>Chấp nhận / Sửa / Từ chối / Lưu</li>
+                        <li>Chủ sân / tổ chức duyệt → Ra sân → Hoàn thành</li>
+                    </ol>
+                </article>
+                <article class="the-luong">
+                    <h3>Chủ sân</h3>
+                    <ol>
+                        <li>Đăng nhập → Quản lý sân → Tạo khung</li>
+                        <li>Xem đơn chờ → Kiểm tra từng đợt</li>
+                        <li>No-show Risk &amp; bảng chứng minh</li>
+                        <li>Chấp nhận hoặc từ chối / Sửa / Bỏ qua / Lưu</li>
+                        <li>Duyệt thủ công → Nhận sân → Hoàn thành</li>
+                    </ol>
+                </article>
+                <article class="the-luong">
+                    <h3>Điều phối CLB</h3>
+                    <ol>
+                        <li>Đăng nhập → Tạo sự kiện → Mời thành viên</li>
+                        <li>Xem đăng ký → Chọn ẩn người đủ điều kiện</li>
+                        <li>Team Balancer → Xem lý do cân bằng</li>
+                        <li>Chấp nhận / Đổi người / Tự chỉnh / Lưu</li>
+                        <li>Công bố → Tổ chức → Tổng kết / Lưu trữ</li>
+                    </ol>
+                </article>
+                <article class="the-luong">
+                    <h3>Quản trị viên</h3>
+                    <ol>
+                        <li>Đăng nhập → Rà soát môn / người dùng</li>
+                        <li>Lọc dữ liệu → Xem chi tiết &amp; ảnh hưởng</li>
+                        <li>Đọc lý do / bằng chứng; AI không ghi đè quyền</li>
+                        <li>Chỉnh sửa → Xác nhận có cớ → Lưu</li>
+                        <li>Xem báo cáo tổng hợp → Lưu / Xuất</li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+
+        <section class="luoi-quy-uoc" aria-label="Quy tắc responsive và dữ liệu">
+            <article class="the-quy-uoc">
+                <h2>Responsive &amp; điều hướng</h2>
+                <p>Di động: Tìm sân · Chi tiết / chọn giờ · Trận mở / Skill Match · Lịch của tôi.</p>
+                <p>390px: một cột, bố trí gọn, CTA dễ dùng bằng tay. Desktop 1440px: khám phá rộng; vận hành có thể lên 224px.</p>
+            </article>
+            <article class="the-quy-uoc">
+                <h2>Quy ước dữ liệu &amp; trạng thái</h2>
+                <p>CC-1010 · P01 · 10/10 · 16:00–18:00 · Minh Anh</p>
+                <p>Trận: 10/10 · P02 · 20–18 · 3/4 người, còn 1 chỗ.</p>
+                <p>EV-1010 · P03 · 18–20 · 8/8 người · 7.200.000đ.</p>
+                <p>Rủi ro chỉ gợi ý từ lịch sử / quy ước ngưỡng. Mọi hành động vẫn ở trạng thái thật.</p>
+            </article>
+        </section>
+
+        <section class="phan-muc phan-bo-cuc" aria-labelledby="tieu-de-bo-cuc">
+            <h2 id="tieu-de-bo-cuc">Khung cấu trúc · ba bố cục chính</h2>
+            <div class="luoi-bo-cuc">
+                <article class="the-bo-cuc">
+                    <h3>Khám phá / tìm sân</h3>
+                    <div class="wireframe wireframe-kham-pha" aria-hidden="true">
+                        <span></span><span></span><div><i></i><i></i></div>
+                    </div>
+                    <p>Bộ lọc + thẻ sân + giá &amp; giờ</p>
+                </article>
+                <article class="the-bo-cuc">
+                    <h3>Vận hành / bảng &amp; biểu mẫu</h3>
+                    <div class="wireframe wireframe-van-hanh" aria-hidden="true">
+                        <span></span><span></span><div><i></i><i></i></div>
+                    </div>
+                    <p>Thanh bên + lọc + bảng + biểu mẫu sửa</p>
+                </article>
+                <article class="the-bo-cuc">
+                    <h3>Xếp đội / hai nửa sân</h3>
+                    <div class="wireframe wireframe-xep-doi" aria-hidden="true">
+                        <span></span><span></span><div><i></i><i></i></div>
+                    </div>
+                    <p>Ngữ cảnh + danh sách chọn + đội + AI</p>
+                </article>
+            </div>
+        </section>
+
+        <footer class="chan-trang">
+            <span>COURTCONNECT · KIẾN TRÚC TRẢI NGHIỆM</span>
+            <a href="khampha.html">Về trang khám phá ↗</a>
+        </footer>
+    </main>
+    <script src="dieu-huong-vai-tro.js"></script>
+</body>
+</html>
