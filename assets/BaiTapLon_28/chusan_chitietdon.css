@@ -1,0 +1,449 @@
+/* --- Kế thừa biến màu gốc từ chusan_tongquan.css --- */
+@import url('chusan_tongquan.css');
+
+:root {
+    --brand-primary-dark: #0B2B22; 
+    --brand-accent-lime: #C8F05A;
+    --bg-amber-warning: #FFF3D6;
+    --bg-soft-green: #EAF0E8;
+    --border-soft-green: #D1DED0;
+}
+
+/* Base Page Layout */
+.page-header-model {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .page-header-model {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.btn-print-custom {
+    padding: 0.625rem 1.25rem !important;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    background-color: var(--brand-primary-dark) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    cursor: pointer;
+}
+
+/* --- Top Grid Layout (2 Cột) --- */
+.detail-top-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+    .detail-top-grid {
+        grid-template-columns: 1fr 340px;
+    }
+}
+
+.left-detail-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Card Style Kế thừa */
+.card-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--brand-primary-dark);
+    margin-bottom: 1rem;
+}
+
+.detail-info-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid var(--gray-100);
+}
+
+/* Badges Status Bar */
+.badges-status-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.status-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 0.25rem 0.625rem;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.badge-green {
+    background-color: var(--brand-accent-lime);
+    color: var(--brand-primary-dark);
+}
+
+.badge-gray {
+    background-color: #F1F5F9;
+    color: #475569;
+}
+
+.badge-amber {
+    background-color: var(--bg-amber-warning);
+    color: #8C5810;
+}
+
+.icon-badge {
+    width: 12px;
+    height: 12px;
+}
+
+/* Fields Grid */
+.detail-fields-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .detail-fields-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.field-label-small {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray-400);
+    letter-spacing: 0.5px;
+}
+
+.field-value-bold {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--brand-primary-dark);
+    margin-top: 0.25rem;
+}
+
+.field-subtext {
+    font-size: 0.8125rem;
+    color: var(--gray-600);
+    margin-top: 0.125rem;
+}
+
+.divider-line {
+    height: 1px;
+    background-color: var(--gray-100);
+    margin: 1.25rem 0;
+}
+
+.divider-line-light {
+    height: 1px;
+    background-color: var(--gray-100);
+    margin: 1rem 0;
+}
+
+/* Table Giá */
+.price-summary-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8125rem;
+}
+
+.price-label {
+    color: var(--gray-700);
+}
+
+.price-value-bold {
+    font-weight: 700;
+    color: var(--brand-primary-dark);
+}
+
+.price-value {
+    color: var(--gray-600);
+}
+
+.note-footer-text {
+    font-size: 11px;
+    color: var(--gray-500);
+    margin-top: 1rem;
+}
+
+/* Audit Log Card */
+.detail-log-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid var(--gray-100);
+}
+
+.audit-log-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    font-size: 0.8125rem;
+    color: var(--gray-700);
+}
+
+.log-footer-muted {
+    font-size: 11px;
+    color: var(--gray-400);
+    margin-top: 0.875rem;
+}
+
+/* Right Column: Counter Actions Card */
+.counter-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid var(--gray-100);
+    display: flex;
+    flex-direction: column;
+}
+
+.counter-time-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.large-time-num {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--brand-primary-dark);
+    line-height: 1;
+}
+
+.sub-time-str {
+    font-size: 0.8125rem;
+    color: var(--gray-500);
+    margin-top: 0.375rem;
+}
+
+.counter-primary-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+}
+
+.btn-primary-dark-pill {
+    background-color: var(--brand-primary-dark);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    width: auto;
+    display: inline-block;
+    transition: opacity 150ms ease;
+}
+
+.btn-primary-dark-pill:hover {
+    opacity: 0.92;
+}
+
+.btn-disabled-pill {
+    background-color: #E2E8F0;
+    color: #94A3B8;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: not-allowed;
+    text-align: center;
+    width: auto; /* Ôm sát theo chữ */
+    display: inline-block;
+}
+
+.counter-notice-text {
+    font-size: 11px;
+    color: var(--gray-500);
+    margin-top: 0.875rem;
+    line-height: 1.4;
+}
+
+.counter-secondary-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+}
+
+.btn-pill-outline {
+    background: #FFFFFF;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--brand-primary-dark);
+    cursor: pointer;
+    width: auto; /* Ôm sát theo chữ */
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-pill-danger {
+    background: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    border-radius: 8px;
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #991B1B;
+    cursor: pointer;
+    text-align: center;
+    width: auto; /* Ôm sát theo chữ */
+    display: inline-block;
+}
+
+/* --- Bottom Variant Cards Grid --- */
+.detail-variants-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    align-items: start;
+}
+
+@media (min-width: 1024px) {
+    .detail-variants-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.variant-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid var(--gray-100);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start; /* Nội dung hiển thị tự nhiên từ trên xuống */
+    height: auto; /* Không bắt buộc 2 hộp phải dài bằng nhau, chiều cao ôm sát nội dung từng hộp */
+    box-sizing: border-box;
+}
+
+.variant-status-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: #8C5810;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.variant-order-desc {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--brand-primary-dark);
+}
+
+.form-group-box {
+    background: #FFFFFF;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.input-field-card {
+    background: #FAFAFA;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 0.625rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.input-label-sm {
+    font-size: 11px;
+    color: var(--gray-500);
+}
+
+.input-text-model {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--brand-primary-dark);
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+.input-helper-text {
+    font-size: 11px;
+    color: var(--gray-400);
+    margin-top: 0.25rem;
+}
+
+.inputs-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.875rem;
+}
+
+.variant-btn-row {
+    display: flex;
+    gap: 0.625rem;
+}
+
+.btn-sm-custom {
+    font-size: 0.75rem !important;
+    padding: 0.625rem 1rem !important;
+}
+
+.info-soft-green-box {
+    background-color: var(--bg-soft-green);
+    border: 1px solid var(--border-soft-green);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 11px;
+    color: var(--brand-primary-dark);
+    line-height: 1.5;
+}
+
+/* Bottom Gray Info Banner */
+.info-banner-gray {
+    background-color: #EAF0E8;
+    border-radius: 12px;
+    padding: 0.875rem 1.25rem;
+    font-size: 11px;
+    color: #0B2B22;
+    margin-bottom: 2rem;
+}
