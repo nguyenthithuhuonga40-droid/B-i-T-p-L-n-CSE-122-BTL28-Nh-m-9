@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f6f0">
+    <meta name="description" content="Theo dõi hoạt động thể thao và quản lý báo cáo CourtConnect.">
+    <title>Báo cáo thể thao | CourtConnect</title>
+    <link rel="stylesheet" href="baocao.css">
+    <script src="baocao.js" defer></script>
+</head>
+<body>
+    <header class="thanh-dau-trang">
+        <a class="logo" href="quantrivien.html" aria-label="CourtConnect - Trang quản trị">
+            <span aria-hidden="true">▥</span> CourtConnect
+        </a>
+        <div class="tai-khoan-tren">
+            <span>Quản trị viên</span>
+            <span aria-hidden="true">·</span>
+            <button id="nut-tai-khoan" type="button">Hải Nam <span aria-hidden="true">⌄</span></button>
+        </div>
+        <a class="nut-chuong" href="thongbao.html" aria-label="Mở thông báo">♧</a>
+    </header>
+
+    <aside class="thanh-ben" aria-label="Điều hướng quản trị">
+        <h2>Vận hành hệ thống</h2>
+        <nav>
+            <a class="muc-menu" href="quantrivien.html">Môn thể thao</a>
+            <a class="muc-menu" href="nguoidung.html">Người dùng</a>
+            <a class="muc-menu dang-chon" href="baocao.html" aria-current="page">Báo cáo thể thao</a>
+            <a class="muc-menu" href="thongbao.html">Thông báo</a>
+        </nav>
+        <p class="thong-tin-du-lieu">Dữ liệu minh họa · 10/2026</p>
+        <a class="lien-ket-tro-giup" href="mailto:hotro@courtconnect.example">Trợ giúp &amp; phản hồi ↗</a>
+    </aside>
+
+    <main class="noi-dung">
+        <div class="duong-dan">QUẢN TRỊ VIÊN&nbsp; / &nbsp;COURTCONNECT</div>
+
+        <section class="dau-noi-dung" aria-labelledby="tieu-de-trang">
+            <div>
+                <h1 id="tieu-de-trang">Đọc nhịp chơi của cộng đồng.</h1>
+                <p>Số liệu tổng hợp giả lập · Không đại diện hoạt động doanh thu thực tế</p>
+            </div>
+            <button class="nut nut-chinh nut-them" id="nut-tao-bao-cao" type="button">＋ Tạo báo cáo</button>
+        </section>
+
+        <form class="bo-loc" id="form-bo-loc">
+            <fieldset class="truong-bo-loc truong-ngay">
+                <legend>Khoảng ngày</legend>
+                <div class="chon-ngay">
+                    <label>
+                        <span class="visually-hidden">Từ ngày</span>
+                        <input id="ngay-bat-dau" type="date" value="2026-10-01" aria-label="Từ ngày">
+                    </label>
+                    <span aria-hidden="true">–</span>
+                    <label>
+                        <span class="visually-hidden">Đến ngày</span>
+                        <input id="ngay-ket-thuc" type="date" value="2026-10-10" aria-label="Đến ngày">
+                    </label>
+                </div>
+            </fieldset>
+            <label class="truong-bo-loc">
+                <span>Địa điểm</span>
+                <select id="loc-dia-diem">
+                    <option value="">Tất cả 3 địa điểm</option>
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="Đà Nẵng">Đà Nẵng</option>
+                    <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+                </select>
+            </label>
+            <label class="truong-bo-loc">
+                <span>Môn</span>
+                <select id="loc-mon">
+                    <option value="">Tất cả</option>
+                    <option value="Pickleball">Pickleball</option>
+                    <option value="Cầu lông">Cầu lông</option>
+                    <option value="Bóng bàn">Bóng bàn</option>
+                </select>
+            </label>
+            <button class="nut nut-chinh nut-ap-dung" type="submit">Áp dụng</button>
+        </form>
+        <p class="thong-bao-loc" id="thong-bao-loc" role="status" aria-live="polite"></p>
+
+        <section class="luoi-chi-so" aria-label="Chỉ số hoạt động">
+            <article class="the-chi-so">
+                <h2>Đơn đặt sân</h2>
+                <p class="gia-tri-chi-so" id="chi-so-don">120</p>
+                <p class="ghi-chu-chi-so">Tổng số đơn trong kỳ</p>
+            </article>
+            <article class="the-chi-so">
+                <h2>Lượt tham gia</h2>
+                <p class="gia-tri-chi-so" id="chi-so-luot">384</p>
+                <p class="ghi-chu-chi-so" id="ghi-chu-luot">96 buổi hoàn thành × 4 người</p>
+            </article>
+            <article class="the-chi-so">
+                <h2>Buổi hoàn thành</h2>
+                <p class="gia-tri-chi-so" id="chi-so-buoi">96</p>
+                <p class="ghi-chu-chi-so">80% tổng đơn mẫu</p>
+            </article>
+            <article class="the-chi-so">
+                <h2>Vắng không báo</h2>
+                <p class="gia-tri-chi-so" id="chi-so-vang">6,25%</p>
+                <p class="ghi-chu-chi-so">24/384 lượt mẫu</p>
+            </article>
+        </section>
+
+        <section class="luoi-bieu-do" aria-label="Biểu đồ báo cáo">
+            <article class="the-bieu-do">
+                <h2>Môn được đặt nhiều</h2>
+                <p class="mo-ta-bieu-do">Số đơn mẫu · Tổng <span id="tong-don-mon">120</span></p>
+                <div class="thanh-mon" id="thanh-mon"></div>
+                <p class="ghi-chu-bieu-do" id="ghi-chu-mon">Đã hoàn thành 80 · Đã hủy 12 · Chờ xác nhận 28</p>
+            </article>
+            <article class="the-bieu-do bieu-do-xu-huong">
+                <h2>Xu hướng vàng · Dữ liệu mock</h2>
+                <p class="mo-ta-bieu-do">Lượt vắng / lượt tham gia theo tuần</p>
+                <div class="bieu-do-cot" id="bieu-do-cot" role="img" aria-label="Biểu đồ lượt vắng theo tuần"></div>
+                <p class="ghi-chu-bieu-do">Chỉ dùng để theo dõi tổng hợp; không kết luận về một cá nhân.</p>
+            </article>
+        </section>
+
+        <section class="khu-bao-cao" aria-labelledby="tieu-de-bao-cao">
+            <div class="dau-khu-bao-cao">
+                <h2 id="tieu-de-bao-cao">Báo cáo đã lưu</h2>
+                <button class="nut nut-vien" id="nut-luu-bo-loc" type="button">Tạo từ bộ lọc hiện tại</button>
+            </div>
+            <div class="bang-bao-cao">
+                <div class="bang-cuộn">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Tên báo cáo</th>
+                                <th scope="col">Phạm vi</th>
+                                <th scope="col">Người tạo</th>
+                                <th scope="col">Trạng thái</th>
+                                <th scope="col">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="danh-sach-bao-cao"></tbody>
+                    </table>
+                </div>
+                <p class="thong-tin-bang" id="thong-tin-bang" role="status" aria-live="polite"></p>
+                <p class="khong-co-ket-qua" id="khong-co-ket-qua" hidden>Chưa có báo cáo nào được lưu.</p>
+            </div>
+        </section>
+
+        <form class="form-luu-bao-cao" id="form-luu-bao-cao">
+            <label class="truong-ten-bao-cao" for="ten-bao-cao">
+                <span class="visually-hidden">Tên báo cáo mới</span>
+                <input id="ten-bao-cao" type="text" maxlength="80" placeholder="Tên báo cáo mới · Nhịp chơi đầu tháng 10">
+            </label>
+            <button class="nut nut-chinh" type="submit">Lưu báo cáo</button>
+            <button class="nut nut-luu-tru" id="nut-luu-tru" type="button">Xác nhận lưu trữ</button>
+        </form>
+
+        <p class="ghi-chu-quyen">Báo cáo lưu bộ lọc và ảnh chụp dữ liệu mẫu. Không có thống kê thật hay xuất dữ liệu cá nhân.</p>
+        <footer class="chan-trang">Thiết kế minh họa • CourtConnect • Hà Nội • Không thực hiện giao dịch thật</footer>
+        <p class="thong-bao-tac-vu" id="thong-bao-tac-vu" role="status" aria-live="polite"></p>
+    </main>
+
+    <dialog class="hop-thoai" id="hop-thoai-bao-cao" aria-labelledby="tieu-de-hop-thoai">
+        <form method="dialog" class="noi-dung-hop-thoai">
+            <h2 id="tieu-de-hop-thoai">Chi tiết báo cáo</h2>
+            <p id="noi-dung-hop-thoai"></p>
+            <div class="nhom-nut-hop-thoai">
+                <button class="nut nut-vien" id="nut-dong-hop-thoai" type="button">Đóng</button>
+                <button class="nut nut-chinh" id="nut-xac-nhan-hop-thoai" type="button">Đã hiểu</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>

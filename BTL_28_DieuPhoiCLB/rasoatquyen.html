@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f6f0">
+    <meta name="description" content="Rà soát vai trò và phạm vi quyền người dùng CourtConnect.">
+    <title>Rà soát quyền | CourtConnect</title>
+    <link rel="stylesheet" href="rasoatquyen.css">
+    <script src="rasoatquyen.js" defer></script>
+</head>
+<body>
+    <header class="thanh-dau-trang">
+        <a class="logo" href="quantrivien.html" aria-label="CourtConnect - Trang quản trị">
+            <span aria-hidden="true">▥</span> CourtConnect
+        </a>
+        <div class="tai-khoan-tren">
+            <span>Quản trị viên</span>
+            <span aria-hidden="true">·</span>
+            <button id="nut-tai-khoan" type="button">Hải Nam <span aria-hidden="true">⌄</span></button>
+        </div>
+        <a class="nut-chuong" href="thongbao.html" aria-label="Mở thông báo">♧</a>
+    </header>
+
+    <aside class="thanh-ben" aria-label="Điều hướng quản trị">
+        <h2>Vận hành hệ thống</h2>
+        <nav>
+            <a class="muc-menu" href="quantrivien.html">Môn thể thao</a>
+            <a class="muc-menu dang-chon" href="nguoidung.html">Người dùng</a>
+            <a class="muc-menu" href="baocao.html">Báo cáo thể thao</a>
+            <a class="muc-menu" href="thongbao.html">Thông báo</a>
+        </nav>
+        <p class="thong-tin-du-lieu">Dữ liệu minh họa · 10/2026</p>
+        <a class="lien-ket-tro-giup" href="mailto:hotro@courtconnect.example">Trợ giúp &amp; phản hồi ↗</a>
+    </aside>
+
+    <main class="noi-dung">
+        <div class="duong-dan">QUẢN TRỊ VIÊN&nbsp; / &nbsp;COURTCONNECT</div>
+
+        <section class="dau-noi-dung" aria-labelledby="tieu-de-trang">
+            <div>
+                <h1 id="tieu-de-trang">Nguyễn Minh Anh</h1>
+                <p id="thong-tin-nguoi-dung">USR-001 · minhanh@example.com · Hồ sơ và phạm vi truy cập</p>
+            </div>
+            <button class="nut nut-chinh" id="nut-luu-quyet-dinh" type="button">Lưu quyết định</button>
+        </section>
+
+        <section class="luoi-tong-quan" aria-label="Hồ sơ và phạm vi quyền">
+            <article class="the-ho-so">
+                <h2>Hồ sơ</h2>
+                <span class="nhan-trang-thai" id="trang-thai-nguoi-dung">MA · Hoạt động</span>
+                <p class="thong-tin-ho-so">
+                    <span id="vai-tro-ho-so">Người chơi · Hà Nội</span>
+                    <span id="so-dien-thoai">090 123 4567</span>
+                    <span>Tham gia từ 12/08/2026</span>
+                </p>
+                <div class="ngan-cach"></div>
+                <h3>Trình độ tự đánh giá</h3>
+                <p class="trinh-do">
+                    <span>Pickleball · 3.0</span>
+                    <span>Cầu lông · Trung bình</span>
+                    <small>Không có tuyên bố xác minh danh tính hoặc kỹ năng.</small>
+                </p>
+                <button class="nut nut-vien" id="nut-xem-hoat-dong" type="button">Xem lịch sử hoạt động</button>
+            </article>
+
+            <section class="the-quyen" aria-labelledby="tieu-de-quyen">
+                <h2 id="tieu-de-quyen">Vai trò &amp; phạm vi quyền</h2>
+                <div class="hang-thong-tin">
+                    <div class="o-thong-tin">
+                        <span>Vai trò hiện tại</span>
+                        <strong id="vai-tro-hien-tai">Người chơi</strong>
+                    </div>
+                    <div class="o-thong-tin">
+                        <span>Trạng thái truy cập</span>
+                        <strong id="trang-thai-truy-cap">Đang hoạt động</strong>
+                    </div>
+                </div>
+                <ul class="danh-sach-quyen" id="danh-sach-quyen"></ul>
+                <label class="truong-ly-do" for="ly-do-ra-soat">
+                    <span>Lý do quyết định *</span>
+                    <textarea id="ly-do-ra-soat" rows="2" maxlength="180">Giữ quyền người chơi; không có yêu cầu cấp vai trò khác.</textarea>
+                </label>
+                <p class="loi-form" id="loi-ra-soat" role="alert" hidden></p>
+                <div class="nhom-nut-quyen">
+                    <button class="nut nut-chinh" id="nut-luu-ra-soat" type="button">Lưu rà soát</button>
+                    <button class="nut nut-vien" id="nut-doi-vai-tro" type="button">Đổi vai trò</button>
+                    <button class="nut nut-nguy-hiem" id="nut-vo-hieu-hoa" type="button">Vô hiệu hóa</button>
+                    <button class="nut nut-vien" id="nut-kich-hoat" type="button" hidden>Bật lại</button>
+                </div>
+            </section>
+        </section>
+
+        <p class="ghi-chu-quyen">Rà soát quyền không thay đổi trình độ. Quyết định phải có lý do và ghi lịch sử.</p>
+
+        <section class="khu-lich-su" aria-labelledby="tieu-de-lich-su">
+            <h2 id="tieu-de-lich-su">Lịch sử rà soát</h2>
+            <div class="bang-lich-su">
+                <div class="bang-cuộn">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Thời gian</th>
+                                <th scope="col">Người thực hiện</th>
+                                <th scope="col">Quyết định</th>
+                                <th scope="col">Lý do</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lich-su-ra-soat"></tbody>
+                    </table>
+                </div>
+                <p class="thong-tin-bang" id="thong-tin-lich-su"></p>
+                <p class="khong-co-du-lieu" id="khong-co-lich-su" hidden>Chưa có lịch sử rà soát.</p>
+            </div>
+        </section>
+
+        <section class="the-sau-khi-luu" aria-labelledby="tieu-de-sau-khi-luu">
+            <h2 id="tieu-de-sau-khi-luu">Sau khi lưu</h2>
+            <span class="nhan-da-luu" id="nhan-da-luu">✓ Quyết định đã lưu</span>
+            <p id="thong-tin-sau-khi-luu">Không thay đổi quyền. Nhật ký thêm người thực hiện Hải Nam và lý do rà soát.</p>
+        </section>
+
+        <footer class="chan-trang">Thiết kế minh họa • CourtConnect • Hà Nội • Không thực hiện giao dịch thật</footer>
+        <p class="thong-bao-tac-vu" id="thong-bao-tac-vu" role="status" aria-live="polite"></p>
+    </main>
+
+    <dialog class="hop-thoai" id="hop-thoai-quyen" aria-labelledby="tieu-de-hop-thoai">
+        <form method="dialog" class="noi-dung-hop-thoai">
+            <h2 id="tieu-de-hop-thoai">Cập nhật vai trò</h2>
+            <p id="mo-ta-hop-thoai">Chọn vai trò phù hợp và ghi rõ căn cứ thay đổi.</p>
+            <label class="truong-hop-thoai" for="vai-tro-moi">
+                <span>Vai trò</span>
+                <select id="vai-tro-moi">
+                    <option value="Người chơi">Người chơi</option>
+                    <option value="Chủ sân">Chủ sân</option>
+                    <option value="Điều phối CLB">Điều phối CLB</option>
+                    <option value="Quản trị viên">Quản trị viên</option>
+                </select>
+            </label>
+            <label class="truong-hop-thoai" for="ly-do-thay-doi">
+                <span>Lý do *</span>
+                <textarea id="ly-do-thay-doi" rows="3" maxlength="180" placeholder="Nhập lý do thay đổi..."></textarea>
+            </label>
+            <p class="loi-form" id="loi-hop-thoai" role="alert" hidden></p>
+            <div class="nhom-nut-hop-thoai">
+                <button class="nut nut-vien" id="nut-dong-hop-thoai" type="button">Quay lại</button>
+                <button class="nut nut-chinh" id="nut-xac-nhan-hop-thoai" type="button">Lưu vai trò</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog class="hop-thoai" id="hop-thoai-hoat-dong" aria-labelledby="tieu-de-hoat-dong">
+        <div class="noi-dung-hop-thoai">
+            <h2 id="tieu-de-hoat-dong">Lịch sử hoạt động</h2>
+            <p id="noi-dung-hoat-dong">Lịch sử hoạt động minh họa của tài khoản.</p>
+            <div class="nhom-nut-hop-thoai">
+                <button class="nut nut-chinh" id="nut-dong-hoat-dong" type="button">Đóng</button>
+            </div>
+        </div>
+    </dialog>
+</body>
+</html>
