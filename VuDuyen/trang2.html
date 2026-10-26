@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tây Hồ Sports - Đặt Sân Pickleball</title>
+    <link rel="stylesheet" href="trang2.css">
+</head>
+<body>
+    <div class="khung-chua">
+        <nav class="thanh-menu-sidebar">
+            <div class="logo">COURTCONNECT</div>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="trang2.html" class="active">Chi tiết sân</a></li>
+                <li><a href="trang3.html">Thanh toán</a></li>
+                <li><a href="trang4.html">Tìm bạn chơi</a></li>
+                <li><a href="trang5.html">Chi tiết trận</a></li>
+                <li><a href="trang6.html">Lịch đã đặt</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Khung tiêu đề trên cùng -->
+        <header class="vung-dau-trang">
+            <div class="dau-trang-trai">
+                <h1>Tây Hồ Sports</h1>
+                <p>28 ngõ 76 An Dương, Tây Hồ, Hà Nội • Pickleball ngoài trời</p>
+            </div>
+            <button class="nut-luu-san">🤍 Lưu sân</button>
+        </header>
+
+        <!-- Khung hiển thị hình ảnh bộ sưu tập sân -->
+        <section class="vung-album-anh">
+            <div class="anh-chinh">
+                <img src="../assets/caugiayclublub.jpg" alt="Sân Pickleball chính">
+            </div>
+            <div class="cac-anh-nho">
+                <img src="../assets/tayhosport.webp" alt="Ảnh sân nhỏ 1">
+            </div>
+        </section>
+
+        <!-- Bố cục hai cột chính bên dưới -->
+        <div class="noi-dung-chinh">
+            
+            <!-- Cột trái: Thông tin chi tiết và bảng giá -->
+            <div class="cot-trai">
+                <div class="the-thong-tin thong-tin-san">
+                    <h2>Không gian dành cho một trận hay</h2>
+                    <div class="cac-nhan-dan">
+                        <span class="nhan-dan nhan-mau-xanh">4 sân pickleball</span>
+                        <span class="nhan-dan">06:00-22:00</span>
+                        <span class="nhan-dan">Có đèn buổi tối</span>
+                    </div>
+                    <p class="doan-mo-ta">Mặt sân acrylic, lưới tiêu chuẩn và khu nghỉ thoáng mát. Phù hợp cho đánh đôi, tập luyện và giao lưu CLB.</p>
+                    
+                    <div class="tien-ich">
+                        <span>✓ Gửi xe</span>
+                        <span>✓ Phòng thay đồ</span>
+                        <span>✓ Nước uống</span>
+                        <span>✓ Thuê vợt</span>
+                    </div>
+                </div>
+
+                <div class="the-thong-tin thong-tin-gia">
+                    <h3>Giá theo khung giờ</h3>
+                    <div class="dong-gia-ca">
+                        <span>06:00-16:00</span>
+                        <strong>150.000đ / giờ</strong>
+                    </div>
+                    <div class="dong-gia-ca">
+                        <span>16:00-22:00</span>
+                        <strong>180.000đ / giờ</strong>
+                    </div>
+                    <p class="dong-ghi-chu">Thuê vợt: 30.000đ / chiếc / buổi • Không có trong tổng tiền sân.</p>
+                </div>
+
+                <div class="the-thong-tin quy-dinh-san">
+                    <h3>Quy định trước khi đặt</h3>
+                    <ul>
+                        <li>Có mặt trước giờ chơi 10 phút; đi giày thể thao phù hợp.</li>
+                        <li>Hủy trước 24 giờ: hoàn 100% tiền sân. Trong 24 giờ: liên hệ chủ sân để xử lý.</li>
+                        <li>Không tự ý kéo dài giờ khi chưa được xác nhận.</li>
+                    </ul>
+                    <p class="dong-canh-bao">Địa chỉ và chính sách là nội dung minh họa.</p>
+                </div>
+            </div>
+
+            <!-- Cột phải: Khung chức năng chọn giờ đặt sân -->
+            <div class="cot-phai">
+                <!-- SỬA TẠI ĐÂY: Thêm ID để nhận liên kết cuộn trang mượt mà từ trang sau quay lại -->
+                <div class="the-thong-tin hop-dat-san" id="khu-vuc-dat-san">
+                    <h3>Chọn giờ, giữ nhịp chơi</h3>
+                    
+                    <div class="nhom-nhap-lieu">
+                        <label>Ngày chơi</label>
+                        <div class="ngay-da-chon">Thứ bảy • 10/10/2026</div>
+                        <div class="cac-o-ngay">
+                            <button class="o-ngay kich-hoat">10/10</button>
+                            <button class="o-ngay">11/10</button>
+                            <button class="o-ngay">12/10</button>
+                        </div>
+                    </div>
+
+                    <div class="nhom-nhap-lieu">
+                        <label for="chon-san">Sân</label>
+                        <select id="chon-san">
+                            <option>P01 - Ngoài trời</option>
+                            <option>P02 - Trong nhà</option>
+                            <option>P03 - Có mái che</option>
+                            <option>P04 - Có cho gửi xe </option>
+                        </select>
+                    </div>
+
+                    <div class="nhom-nhap-lieu">
+                        <label>Chọn khung 2 giờ</label>
+                        <div class="cac-khung-gio">
+                            <button class="nut-gio" data-gio="2">14:00–16:00</button>
+                            <button class="nut-gio kich-hoat" data-gio="2">16:00–18:00</button>
+                            <button class="nut-gio bi-khoa">18:00–20:00</button>
+                        </div>
+                        <span class="ghi-chu-khung-gio">Khung đã đặt không thể chọn</span>
+                    </div>
+
+                    <div class="phan-tong-tien">
+                        <span>Tổng tiền sân</span>
+                        <div class="so-tien-tong" id="hien-thi-tong-tien">360.000đ</div>
+                    </div>
+                    <p class="gia-phu-hoa">2 giờ × 180.000đ - Giá minh họa</p>
+
+                    <button class="nut-gui-don" id="nut-xac-nhan-dat">Tiếp tục đặt sân →</button>
+                    
+                    <p class="luu-y-dat-san">Khung giờ chỉ được giữ sau khi đơn đặt sân được xác nhận.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+       
+    <!-- Hộp thoại thanh toán (Mặc định ẩn) -->
+    <div id="hop-thoai-thanh-toan" class="khung-an">
+        <div class="noi-dung-hop-thoai">
+            <div class="dau-hop-thoai">
+                <h3>Xác nhận thông tin đặt sân</h3>
+                <button id="nut-dong-hop-thoai">×</button>
+            </div>
+            <div class="than-hop-thoai">
+                <h4 class="ten-san-tong-ket">Tây Hồ Sports</h4>
+                <p class="dia-chi-tong-ket">28 ngõ 76 An Dương, Tây Hồ, Hà Nội</p>
+                <hr class="vach-cat">
+                <div class="dong-tom-tat"><span>Mã sân chọn:</span> <strong id="kq-san">P01</strong></div>
+                <div class="dong-tom-tat"><span>Ngày chơi:</span> <strong id="kq-ngay">Thứ bảy • 10/10/2026</strong></div>
+                <div class="dong-tom-tat"><span>Khung giờ:</span> <strong id="kq-gio">16:00–18:00 (2 giờ)</strong></div>
+                <div class="khung-gia-tong">
+                    <span>Số tiền cần thanh toán:</span>
+                    <h2 id="kq-tien">360.000đ</h2>
+                </div>
+                <div class="phuong-thuc-vi">
+                    <label class="lua-chon-thanh-toan">
+                        <input type="radio" name="pay" checked> Chuyển khoản qua mã QR (Quét nhanh)
+                    </label>
+                    <label class="lua-chon-thanh-toan">
+                        <input type="radio" name="pay"> Ví điện tử MoMo / ZaloPay
+                    </label>
+                </div>
+            </div>
+            <div class="chan-hop-thoai">
+                <button id="nut-hoan-tat-don" class="nut-chinh">Thanh toán ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Giữ nguyên tệp script kết nối -->
+    <script src="trang2.js"></script>
+    <script src="../BTL_28_DieuPhoiCLB/dieu-huong-vai-tro.js"></script>
+</body>
+</html>

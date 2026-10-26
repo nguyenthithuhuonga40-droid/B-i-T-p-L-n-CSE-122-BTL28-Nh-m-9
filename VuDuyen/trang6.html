@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giữ Nhịp Chơi Của Bạn - CourtConnect</title>
+    <link rel="stylesheet" href="trang6.css">
+</head>
+<body>
+       <nav class="thanh-menu-sidebar">
+        <div class="logo">COURTCONNECT</div>
+        
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="trang2.html">Chi tiết sân</a></li>
+            <li><a href="trang3.html">Thanh toán</a></li>
+            <li><a href="trang4.html">Tìm bạn chơi</a></li>
+            <li><a href="trang5.html">Chi tiết trận</a></li>
+            <li><a href="trang6.html">Lịch đã đặt</a></li>
+        </ul>
+    </nav>
+    <!-- Đầu trang: Thanh menu -->
+    <header class="dau-trang">
+        <div class="vung-tieu-de">
+            <h1 class="tieu-de-chinh">Giữ nhịp chơi của bạn.</h1>
+            <p class="mo-ta-tieu-de">Lịch sắp tới, những trận đã chơi và sân bạn yêu thích.</p>
+            <nav class="thanh-menu-nho">
+                <span class="muc-menu kich-hoat" data-muc="sap-toi">Sắp tới</span>
+                <span class="muc-menu" data-muc="lich-su">Lịch sử</span>
+                <span class="muc-menu" data-muc="san-da-luu">Sân đã lưu</span>
+            </nav>
+        </div>
+        <button type="button" class="nut-dat-san-moi">+ Đặt sân mới</button>
+    </header>
+
+    <!-- Khu vực nội dung chính -->
+    <main class="vung-chinh">
+        <section class="cot-trai">
+            <!-- Thẻ đặt sân sắp tới -->
+            <div class="the-lich-sap-toi">
+                <div class="khoi-ngay-thang">
+                    <div class="chu-thang">THÁNG 10</div>
+                    <div class="so-ngay">10</div>
+                    <div class="chu-thu">THỨ BẢY</div>
+                </div>
+                <div class="khoi-thong-tin-san">
+                    <span class="ma-xac-nhan">CC-1010 • ĐÃ XÁC NHẬN</span>
+                    <h2 class="ten-san-dat">Tây Hồ Sports · P01</h2>
+                    <p class="chi-tiet-lich-dat">16:00–18:00 · Pickleball · 4 người</p>
+                    <p class="thanh-toan-ghi-nhan">360.000đ · Thanh toán mô phỏng đã ghi nhận</p>
+                    <div class="hang-nut-bam-the">
+                        <button type="button" class="nut-hanh-dong-the">Xem mã đặt sân</button>
+                        <button type="button" class="nut-hanh-dong-the">Đổi lịch</button>
+                        <button type="button" class="nut-hanh-dong-the">Hủy đặt sân</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Khối Trận đang theo dõi -->
+            <div class="khung-theo-doi">
+                <h3 class="tieu-de-khoi">Trận bạn đang theo dõi</h3>
+                <div class="the-tran-theo-doi">
+                    <div class="thong-tin-tran-theo-doi">
+                        <h4 class="ten-tran">Đôi vui cuối tuần</h4>
+                        <p class="chi-tiet-tran">10/10 · 18:00–20:00 · Tây Hồ Sports · P02</p>
+                        <p class="ghi-chu-trang-thai-cho">3/4 người · Đang chờ Bảo Trâm duyệt Minh Anh.</p>
+                        <div class="hang-nut-tran">
+                            <button type="button" class="nut-den-nho">Xem trận</button>
+                            <button type="button" class="nut-trang-nho">Rút yêu cầu</button>
+                        </div>
+                    </div>
+                    <div class="nhan-cho-duyet">⏳ Đang chờ duyệt</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cot-phai">
+            <!-- Khối sân đã lưu -->
+            <div class="khung-san-luu">
+                <h3 class="tieu-de-khoi">Sân đã lưu</h3>
+                <div class="the-san-luu">
+                    <div class="vung-anh-san">
+                        <img src="../assets/san-san-the-thao-da-nang.jpg" alt="Ảnh sân Pickleball">
+                    </div>
+                    <div class="noi-dung-san-luu">
+                        <h4 class="ten-san-luu">Tây Hồ Sports</h4>
+                        <p class="thong-tin-san-luu">Tây Hồ · Pickleball · Từ 150.000đ / giờ</p>
+                        <div class="hang-nut-san-luu">
+                            <button type="button" class="nut-dat-lai-rieng">Đặt lại</button>
+                            <button type="button" class="nut-bo-luu">Bỏ lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="khung-nhac-lich">
+                <h3 class="tieu-de-khoi">Nhắc lịch theo ý bạn</h3>
+                <div class="danh-sach-hop-kiem">
+                    <label class="o-hop-kiem">
+                        <input type="checkbox" checked>
+                        <span>Nhắc trước buổi chơi 2 giờ</span>
+                    </label>
+                    <label class="o-hop-kiem">
+                        <input type="checkbox" checked>
+                        <span>Báo khi yêu cầu được duyệt</span>
+                    </label>
+                    <p>Thông báo giúp bạn chủ động; không tự ý xử lý đơn</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="vung-lich-su-toan-trang">
+        <div class="khung-lich-su">
+            <h3 class="tieu-de-khoi">Lịch sử & trạng thái</h3>
+            <table class="bang-lich-su">
+                <thead>
+                    <tr>
+                        <th>Hoạt động</th>
+                        <th>Lịch</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="chu-dam">Cầu Giấy Racket Club · B03</td>
+                        <td>03/10 · 19:00-21:00</td>
+                        <td class="trang-thai-xanh">Hoàn thành</td>
+                    </tr>
+                    <tr>
+                        <td class="chu-dam">Giao lưu Nhịp Sân</td>
+                        <td>04/10 · 08:00-10:00</td>
+                        <td class="trang-thai-xanh">Đã duyệt</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Bảng hiển thị đè Pop-up lên màn hình khi chọn "Sân đã lưu" -->
+    <div id="popup-san-luu" class="khung-bo-loc-de">
+        <div class="noi-dung-popup">
+            <span class="nut-dong-popup">&times;</span>
+            <h2 class="tieu-de-popup">Thông tin sân đã lưu</h2>
+            <div class="chi-tiet-trong-popup">
+                <h3 style="margin: 5px 0; color: #333;">Tây Hồ Sports</h3>
+                <p class="dong-thong-tin-popup"><strong>Vị trí:</strong> Quận Tây Hồ, Hà Nội</p>
+                <p class="dong-thong-tin-popup"><strong>Bộ môn:</strong> Pickleball tiêu chuẩn</p>
+                <p class="dong-thong-tin-popup"><strong>Mức giá:</strong> Từ 150.000đ / giờ</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="trang6.js"></script>
+    <script src="../BTL_28_DieuPhoiCLB/dieu-huong-vai-tro.js"></script>
+</body>
+</html>

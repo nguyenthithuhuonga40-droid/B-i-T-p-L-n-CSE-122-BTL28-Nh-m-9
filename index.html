@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f6f0">
+    <meta name="description" content="CourtConnect kết nối người chơi với sân thể thao và cộng đồng.">
+    <meta http-equiv="refresh" content="2; url=BTL_28_DieuPhoiCLB/khampha.html">
+    <title>CourtConnect | Đang mở trang khám phá</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            color-scheme: light;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: #153d33;
+            background: #f5f6f0;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            display: grid;
+            min-width: 320px;
+            min-height: 100vh;
+            margin: 0;
+            place-items: center;
+        }
+
+        main {
+            width: min(100% - 40px, 440px);
+            padding: 38px 30px;
+            border: 1px solid #e0e7df;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0 18px 55px rgb(20 49 36 / 8%);
+            text-align: center;
+            animation: hien-dan 500ms ease both;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #153d33;
+            font-size: 20px;
+            font-weight: 750;
+        }
+
+        .bieu-tuong {
+            color: #548064;
+        }
+
+        .vong-xoay {
+            width: 38px;
+            height: 38px;
+            margin: 28px auto 18px;
+            border: 3px solid #e6ede4;
+            border-top-color: #548064;
+            border-radius: 50%;
+            animation: xoay 800ms linear infinite;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 650;
+        }
+
+        p {
+            margin: 10px 0 0;
+            color: #718078;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        a {
+            display: inline-flex;
+            min-height: 42px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 22px;
+            padding: 0 16px;
+            border-radius: 9px;
+            color: #fff;
+            background: #103f32;
+            font-size: 13px;
+            font-weight: 650;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background: #195443;
+        }
+
+        a:focus-visible {
+            outline: 3px solid #9bbd63;
+            outline-offset: 3px;
+        }
+
+        @keyframes xoay {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes hien-dan {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const thoiGianChuyenTrang = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+                ? 150
+                : 700;
+
+            window.setTimeout(() => {
+                window.location.replace("BTL_28_DieuPhoiCLB/khampha.html");
+            }, thoiGianChuyenTrang);
+        });
+    </script>
+</head>
+<body>
+    <main>
+        <div class="logo"><span class="bieu-tuong" aria-hidden="true">▥</span> CourtConnect</div>
+        <div class="vong-xoay" aria-hidden="true"></div>
+        <h1>Chào mừng bạn đến với CourtConnect</h1>
+        <p>Đang mở trang Khám phá. Tiếp theo, bạn có thể chọn vai trò trước khi đăng nhập hoặc đăng ký.</p>
+        <a href="BTL_28_DieuPhoiCLB/khampha.html">Vào Khám phá ngay</a>
+    </main>
+</body>
+</html>

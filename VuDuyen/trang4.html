@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourtConnect - Tìm Kiếm Trận Đấu Pickleball</title>
+    <link rel="stylesheet" href="trang4.css">
+</head>
+<body>
+    <div class="khung-giao-dien">
+        <nav class="thanh-menu-sidebar">
+        <div class="logo">COURTCONNECT</div>
+        
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="trang2.html">Chi tiết sân</a></li>
+            <li><a href="trang3.html">Thanh toán</a></li>
+            <li><a href="trang4.html">Tìm bạn chơi</a></li>
+            <li><a href="trang5.html">Chi tiết trận</a></li>
+            <li><a href="trang6.html">Lịch đã đặt</a></li>
+        </ul>
+    </nav>
+        <!-- Thanh tiêu đề và bộ lọc -->
+        <header class="dau-trang">
+            <div class="dong-tieu-de">
+                <div>
+                    <h1 class="tieu-de-chinh">Còn chỗ cho một người như bạn.</h1>
+                    <p class="chu-thich">Tìm trận vừa sức, đúng lịch và những người bạn mới.</p>
+                </div>
+                <!-- Nút kích hoạt mở Modal Tạo trận (1) -->
+                <button class="nut-bam nut-tao-tran" id="nut-kich-hoat-tao-1">+ Tạo trận</button>
+            </div>
+
+            <div class="thanh-bo-loc">
+                <div class="o-loc">
+                    <label>Môn</label>
+                    <select><option>Pickleball</option>
+                    <option>Cầu lông</option>
+                    <option>Tennis</option>
+                    </select>
+                </div>
+                <div class="o-loc">
+                    <label>Trình độ</label>
+                    <select><option>1.0 - Yếu</option>
+                    <option>2.0 - Mới chơi</option>
+                    <option>3.0 - Trung cấp</option>
+                    <option>4.0 - Giỏi</option>
+                    </select>
+
+                </div>
+                <div class="o-loc">
+                    <label>Khu vực</label>
+                    <select><option>Tất cả Hà Nội</option></select>
+                </div>
+                <div class="o-loc">
+                    <label>Ngày</label>
+                    <input type="text" id="bo-loc-ngay" readonly>
+                </div>
+                <button class="nut-bam nut-loc">Lọc trận</button>
+            </div>
+        </header>
+
+        <!-- Bố cục nội dung chính -->
+        <main class="noi-dung-chinh">
+            
+            <!-- Cột trái: Danh sách trận đấu -->
+            <section class="cot-trai">
+                <h2 class="tieu-de-cot">Trận đang tìm người <span class="so-luong-mau">3 trận minh họa</span></h2>
+                
+                <div class="danh-sach-tran" id="vung-danh-sach-tran">
+                    <!-- Trận đấu sẽ được tự động đổ vào đây bằng JS -->
+                </div>
+
+                <!-- Ô tạo trận nhanh -->
+                <div class="the-tran o-tu-tao-tran">
+                    <h3>Tạo nhịp chơi của riêng bạn</h3>
+                    <p>Chọn sân, nêu rõ trình độ và số chỗ còn trống. Cộng đồng sẽ tìm thấy bạn.</p>
+                    <!-- Nút kích hoạt mở Modal Tạo trận (2) -->
+                    <button class="nut-bam nut-trang" id="nut-kich-hoat-tao-2">+ Tạo trận mới</button>
+                    <span class="chu-mo-duoi-cung">Trình độ hiển thị là tự đánh giá.</span>
+                </div>
+            </section>
+
+            <!-- Cột phải: Tính năng AI Match -->
+            <aside class="cot-phai">
+                <div class="khung-ai-goi-y">
+                    <div class="ai-tieu-de">
+                        <span>✨ Skill Match</span>
+                        <span class="nhan-ai">AI mô phỏng</span>
+                    </div>
+
+                    <div class="ai-thong-tin-user">
+                        <div class="dong-thong-tin"><span>Trình độ của bạn:</span><strong>Pickleball - 3.0</strong></div>
+                        <div class="dong-thong-tin"><span>Lịch rảnh:</span><strong id="ai-lich-ranh">--/-- - 18:00-20:00</strong></div>
+                        <div class="dong-thong-tin"><span>Khoảng cách ưu tiên:</span><strong>Khu vực Tây Hồ</strong></div>
+                    </div>
+
+                    <button class="nut-bam nut-goi-y">Tạo gợi ý</button>
+
+                    <!-- Khung kết quả AI tìm kiếm -->
+                    <div class="ket-qua-ai" id="vung-ket-qua-ai">
+                        <div class="ai-ti-le-hop">Gợi ý phù hợp nhất <span class="phan-tram">🔥 92%</span></div>
+                        <h3 class="ten-tran-goi-y" id="ai-ten-tran">Đang tính toán...</h3>
+                        <p class="thong-tin-gio-goi-y" id="ai-gio-tran">--/-- - --:--</p>
+                        
+                        <ul class="tieu-chi-hop">
+                            <li>✓ Cùng giờ rảnh 18:00-20:00</li>
+                            <li>✓ Mức 3.0 nằm trong khoảng 3.0–3.5</li>
+                            <li>✓ Cùng khu vực; còn 1 chỗ</li>
+                        </ul>
+                        <p class="ai-luu-y">Điểm phù hợp xếp xỉ, từ dữ liệu mô phỏng, không đảm bảo kết quả thi đấu.</p>
+
+                        <div class="nhom-nut-hanh-dong">
+                            <button class="nut-bam nut-duyet">Chấp nhận</button>
+                            <button class="nut-bam nut-phu">Sửa</button>
+                        </div>
+                        <div class="hang-nut-phu">
+                            <button class="nut-chu">Từ chối</button>
+                            <button class="nut-chu">Tạo lại</button>
+                            <button class="nut-chu">Lưu</button>
+                        </div>
+                        <p class="chu-mo-nho">Chấp nhận mở chi tiết trận; bạn vẫn cần gửi yêu cầu tham gia.</p>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Modal hiển thị chi tiết trận đấu khi bấm xem -->
+    <div class="khung-hop-thoai" id="hop-thoai-chi-tiet">
+        <div class="noi-dung-hop-thoai">
+            <span class="nut-dong-hop-thoai" id="nut-dong-modal">&times;</span>
+            <h2 id="modal-ten-tran" class="tieu-de-modal">Tên trận đấu</h2>
+            <div class="chi-tiet-dong"><strong>Trình độ:</strong> <span id="modal-trinh-do"></span></div>
+            <div class="chi-tiet-dong"><strong>Thời gian:</strong> <span id="modal-thoi-gian"></span></div>
+            <div class="chi-tiet-dong"><strong>Địa điểm:</strong> <span id="modal-dia-diem"></span></div>
+            <div class="chi-tiet-dong"><strong>Chi phí:</strong> <span id="modal-chi-phi"></span></div>
+            <div class="chi-tiet-dong"><strong>Trạng thái số chỗ:</strong> <span id="modal-so-cho"></span></div>
+           <button id="nut-gui-yeu-cau" class="nut-bam nut-duyet">Gửi Yêu Cầu Tham Gia Ngay</button>
+        </div>
+    </div>
+
+    <div class="khung-hop-thoai" id="hop-thoai-tao-tran">
+        <div class="noi-dung-hop-thoai">
+            <span class="nut-dong-hop-thoai" id="nut-dong-modal-tao">&times;</span>
+            
+            <h2 class="tieu-de-modal">Tạo trận mới của riêng bạn</h2>
+            <p class="mo-ta-modal" style="font-size: 13px; color: #666; margin-top: -10px; margin-bottom: 20px;">
+                Vui lòng điền đầy đủ các thông tin bên dưới để tiến hành đăng ký và tạo sân mới.
+            </p>
+
+            <form id="form-thong-tin-tao-tran">
+                <!-- Nhóm thông tin liên hệ -->
+                <div class="truong-thong-tin">
+                    <label class="nhan-nhap-lieu">Họ và tên *</label>
+                    <input type="text" id="tao-ten" class="o-nhap-lieu" placeholder="Nguyễn Minh Anh" required>
+                </div>
+
+                <div class="truong-thong-tin" style="margin-top: 12px;">
+                    <label class="nhan-nhap-lieu">Điện thoại *</label>
+                    <input type="tel" id="tao-sdt" class="o-nhap-lieu" placeholder="090 123 4567" required>
+                </div>
+
+                <div class="truong-thong-tin" style="margin-top: 12px;">
+                    <label class="nhan-nhap-lieu">Email *</label>
+                    <input type="email" id="tao-email" class="o-nhap-lieu" placeholder="minhanh@example.com" required>
+                </div>
+
+                <!-- Nhóm thông tin số lượng -->
+                <div class="truong-thong-tin" style="margin-top: 12px;">
+                    <label class="nhan-nhap-lieu">Số người chơi *</label>
+                    <input type="number" id="tao-so-nguoi" class="o-nhap-lieu" min="1" max="20" placeholder="4" required>
+                </div>
+
+                <div class="truong-thong-tin" style="margin-top: 12px;">
+                    <label class="nhan-nhap-lieu">Người đi cùng (nếu có)</label>
+                    <input type="text" id="tao-nguoi-di-cung" class="o-nhap-lieu" placeholder="Đức Huy, Thu Hà, Quốc Bảo">
+                </div>
+
+                <!-- Thanh chứa các nút hành động dưới đáy form -->
+                <div class="thanh-nut-chan-form" style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px;">
+                    <button type="button" class="nut-bam nut-phu" id="nut-huy-tao-tran">Hủy bỏ</button>
+                    <button type="submit" class="nut-bam nut-duyet">Tạo trận ngay</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="trang4.js"></script>
+    <script src="../BTL_28_DieuPhoiCLB/dieu-huong-vai-tro.js"></script>
+</body>
+</html>
