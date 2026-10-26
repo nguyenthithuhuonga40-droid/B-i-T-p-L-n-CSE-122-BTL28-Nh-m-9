@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#103f32">
+    <title>Đăng nhập | CourtConnect</title>
+    <link rel="stylesheet" href="dangnhap.css">
+    <script src="dangnhap.js" defer></script>
+</head>
+<body>
+    <main class="trang-dang-nhap">
+        <section class="gioi-thieu" aria-label="Giới thiệu CourtConnect">
+            <a class="logo" href="dungchung.html" aria-label="CourtConnect - Trang chủ">
+                <span class="logo-bieu-tuong" aria-hidden="true">▥</span>
+                <span>CourtConnect</span>
+            </a>
+
+            <div class="noi-dung-gioi-thieu">
+                <h1>Một cú chạm.<br>Một trận hay.</h1>
+                <p class="mo-ta-gioi-thieu">Đặt sân, gặp đúng người và dành nhiều thời gian hơn cho điều bạn yêu thích.</p>
+                <img
+                    class="anh-san-choi"
+                    src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+                    alt="Người chơi thể thao trên sân ngoài trời"
+                    fetchpriority="high">
+                <p class="the-loai">PICKLEBALL&nbsp; / &nbsp;CẦU LÔNG&nbsp; / &nbsp;CỘNG ĐỒNG</p>
+                <p class="loi-chao">Bắt đầu từ Hà Nội. Kết nối qua từng trận đấu.</p>
+            </div>
+        </section>
+
+        <section class="khu-vuc-form" aria-labelledby="tieu-de-dang-nhap">
+            <div class="noi-dung-form">
+                <a class="quay-lai" href="dungchung.html">← Về trang khám phá</a>
+                <h2 id="tieu-de-dang-nhap">Chào mừng bạn trở lại.</h2>
+                <p class="mo-ta-form">Lịch sân và những người bạn đang chờ bạn.</p>
+
+                <form id="form-dang-nhap" novalidate>
+                    <div class="truong-nhap">
+                        <label for="email">Email</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            placeholder="minhanh@example.com"
+                            required
+                            aria-describedby="loi-email">
+                        <small class="loi-truong" id="loi-email"></small>
+                    </div>
+
+                    <div class="truong-nhap">
+                        <label for="mat-khau">Mật khẩu</label>
+                        <input
+                            id="mat-khau"
+                            name="matKhau"
+                            type="password"
+                            autocomplete="current-password"
+                            placeholder="Nhập mật khẩu của bạn"
+                            required
+                            aria-describedby="loi-mat-khau">
+                        <small class="loi-truong" id="loi-mat-khau"></small>
+                    </div>
+
+                    <div class="tuy-chon-dang-nhap">
+                        <label class="ghi-nho">
+                            <input type="checkbox" name="ghiNho">
+                            <span>Ghi nhớ đăng nhập</span>
+                        </label>
+                        <a href="khoiphucmatkhau.html">Quên mật khẩu?</a>
+                    </div>
+
+                    <button class="nut-dang-nhap" type="submit">Đăng nhập <span aria-hidden="true">→</span></button>
+                    <p class="thong-bao-form" id="thong-bao-form" role="status" aria-live="polite"></p>
+                </form>
+
+                <section class="khong-gian" aria-labelledby="tieu-de-khong-gian">
+                    <h3 id="tieu-de-khong-gian">Không gian sau khi đăng nhập</h3>
+                    <p><strong>Người chơi</strong><span>Chủ sân</span><span>Điều phối CLB</span></p>
+                    <p><strong>Quản trị viên</strong><span>theo quyền được cấp</span></p>
+                    <p class="ghi-chu-quyen">Vai trò được xác định từ tài khoản; chọn không gian không tự cấp thêm quyền.</p>
+                </section>
+
+                <div class="tao-tai-khoan">
+                    <span>Chưa có tài khoản?</span>
+                    <a class="nut-dang-ky" href="dangky.html">Đăng ký ngay</a>
+                </div>
+
+                <nav class="lien-ket-phu" aria-label="Liên kết hỗ trợ">
+                    <a href="#dieu-khoan">Điều khoản sử dụng</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="#quyen-rieng-tu">Quyền riêng tư</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="dungchung.html#lien-he">Trợ giúp</a>
+                </nav>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
