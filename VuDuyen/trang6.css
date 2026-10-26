@@ -1,0 +1,457 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #f6f5f1;
+    color: #222222;
+    padding: 24px 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+/* --- Đầu trang tươm tất --- */
+.dau-trang {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.tieu-de-chinh {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #065f46;
+    margin-bottom: 4px;
+}
+
+.mo-ta-tieu-de {
+    font-size: 0.88rem;
+    color: #666663;
+    margin-bottom: 12px;
+}
+
+.thanh-menu-nho {
+    display: flex;
+    gap: 16px;
+    font-size: 0.85rem;
+    color: #7b7a76;
+}
+
+.muc-menu.kich-hoat {
+    color: #111111;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.nut-dat-san-moi {
+    background-color: #0c3322;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.vung-chinh {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    max-width: 1140px;
+    align-items: flex-start;
+}
+
+.cot-trai {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cot-phai {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.khung-theo-doi, .khung-lich-su, .khung-san-luu, .khung-nhac-lich {
+    background-color: #ffffff;
+    border: 1px solid #e2e1dc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.tieu-de-khoi {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #065f46;
+    margin-bottom: 14px;
+}
+
+/* --- Thẻ lịch sắp tới màu xanh rêu đậm --- */
+.the-lich-sap-toi {
+    background-color: #0c3322;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.khoi-ngay-thang {
+    background-color: #e5f400;
+    color: #0c3322;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    min-width: 90px;
+}
+
+.chu-thang {
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.so-ngay {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+    margin: 4px 0;
+}
+
+.chu-thu {
+    font-size: 0.68rem;
+    font-weight: 600;
+}
+
+.khoi-thong-tin-san {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.ma-xac-nhan {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #b2dfdb;
+}
+
+.ten-san-dat {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.chi-tiet-lich-dat {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.thanh-toan-ghi-nhan {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin-bottom: 8px;
+}
+
+.hang-nut-bam-the {
+    display: flex;
+    gap: 8px;
+}
+
+.nut-hanh-dong-the {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nut-hanh-dong-the:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.the-tran-theo-doi {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #faf9f5;
+    border: 1px solid #ededeb;
+    border-radius: 6px;
+    padding: 14px;
+}
+
+.ten-tran {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color:#065f46;
+}
+
+.chi-tiet-tran {
+    font-size: 0.85rem;
+    color: #666663;
+    margin-bottom: 4px;
+}
+
+.ghi-chu-trang-thai-cho {
+    font-size: 0.82rem;
+    color: #8c8b86;
+    margin-bottom: 12px;
+}
+
+.hang-nut-tran {
+    display: flex;
+    gap: 8px;
+}
+
+.nut-den-nho {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nut-trang-nho {
+    background-color: #ffffff;
+    color: #222222;
+    border: 1px solid #c5c4be;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nhan-cho-duyet {
+    font-size: 0.78rem;
+    color: #b78103;
+    font-weight: 600;
+    background-color: #fffde7;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+.vung-lich-su-toan-trang{
+    width: 100%;
+    margin-top: 25px;
+}
+.bang-lich-su {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.bang-lich-su th {
+    color: #7b7a76;
+    font-weight: 500;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e2e1dc;
+}
+
+.bang-lich-su td {
+    padding: 10px 0;
+    border-bottom: 1px solid #f2f1ed;
+}
+
+.chu-dam {
+    font-weight: 600;
+    color: #065f46;
+}
+
+.chu-mo {
+    color: #065f46;
+}
+
+.duong-dan-bam {
+    color: #111111;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.tieu-de-khoi{
+    font-size: 25px;
+}
+.trang-thai-xanh { color: #2e7d32; font-weight: 600; }
+.trang-thai-do { color: #c62828; font-weight: 600; }
+.trang-thai-xam { color: #757575; font-weight: 600; }
+.trang-thai-vang { color: #b78103; font-weight: 600; }
+
+.phan-trang-ghi-chu {
+    font-size: 0.78rem;
+    color: #9a9993;
+    margin-top: 10px;
+}
+
+/* --- Cột phải: Thiết kế sân đã lưu --- */
+.the-san-luu {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.vung-anh-san {
+    width: 400px;
+    height: 200px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.vung-anh-san img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ten-san-luu {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.thong-tin-san-luu {
+    font-size: 0.82rem;
+    color: #666663;
+    margin-bottom: 8px;
+}
+
+.hang-nut-san-luu {
+    display: flex;
+    gap: 8px;
+}
+.nut-dat-lai-rieng{
+    border-radius: 10px;
+    padding: 10px;
+}
+.nut-bo-luu {
+    background-color:aquamarine;
+    color: #666663;
+    border: none;
+    font-size: 0.82rem;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 8px;
+}
+.danh-sach-hop-kiem {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.danh-sach-hop-kiem p{
+    font-size: 14px;
+    color:#888;
+}
+
+.o-hop-kiem {
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.ghi-chu-he-thong {
+    font-size: 0.78rem;
+    color: #8c8b86;
+    line-height: 1.4;
+}
+.khung-bo-loc-de {
+    display: none; 
+    position: fixed !important; 
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    z-index: 99999 !important; 
+    justify-content: center;
+    align-items: center;
+}
+
+.noi-dung-popup {
+    background-color: #ffffff !important;
+    padding: 25px !important;
+    border-radius: 12px !important;
+    width: 90% !important;
+    max-width: 450px !important;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.4) !important;
+    position: relative !important;
+    margin: auto !important;
+}
+.nut-dong-popup {
+    position: absolute !important;
+    top: 10px !important;
+    right: 15px !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color: #888 !important;
+    cursor: pointer !important;
+}
+
+.nut-dong-popup:hover {
+    color: #000 !important;
+}
+.bang-lich-su {
+    width: 100%;
+    border-collapse: collapse;
+}
+.thanh-menu-sidebar {
+    width: 100%;            
+    height: auto;          
+    display: flex;          
+    justify-content:center; 
+    align-items: center;    
+    padding: 15px 30px;     
+    background-color:#0d4633; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    margin-right: 200px;
+    color: white;
+    font-size: 23px;
+    font-weight:bold;
+
+}
+
+.thanh-menu-sidebar ul {
+    display: flex;          
+    list-style: none;     
+    margin: 0;
+    padding: 0;
+    gap: 20px;           
+}
+.khung-noi-dung-ben-phai {
+    width: 100%;            
+    margin-left: 0;         
+    padding: 20px;         
+}
+ul li a{
+    color: white;
+}
+@media (max-width: 820px) {
+    .vung-chinh {
+        flex-direction: column;
+    }
+    .the-lich-sap-toi {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
