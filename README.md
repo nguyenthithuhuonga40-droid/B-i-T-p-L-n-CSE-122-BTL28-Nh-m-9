@@ -241,8 +241,10 @@ Các trang dùng chung và luồng Người chơi trong module CourtConnect gồ
 [trangthai.html](./BTL_28_DieuPhoiCLB/trangthai.html): xem các trạng thái và hành động của các gợi ý AI mô phỏng.
 [hethong.html](./BTL_28_DieuPhoiCLB/hethong.html) và [kiemke.html](./BTL_28_DieuPhoiCLB/kiemke.html): hệ thống thiết kế và kiểm kê/luồng dự kiến.
 
+Cũng cần có trạng thái thất bại/không chắc chắn, như thiếu dữ liệu, kết quả không chắc chắn hoặc không thể xử lý; cung cấp lựa chọn thử lại, chỉnh sửa hoặc xử lý thủ công.
 
-## 6. Các tính năng AI mô phỏng
+
+## 6. 🤖 Các tính năng AI mô phỏng
 Ba trải nghiệm AI theo đề tài được thể hiện dưới dạng **mô phỏng Frontend**:
 
 
@@ -276,10 +278,6 @@ Nhập dữ liệu → Kiểm tra hợp lệ → Đang xử lý → Kết quả
 → Lưu vào trạng thái ứng dụng
 
 ```
-
-
-
-Cũng cần có trạng thái thất bại/không chắc chắn, như thiếu dữ liệu, kết quả không chắc chắn hoặc không thể xử lý; cung cấp lựa chọn thử lại, chỉnh sửa hoặc xử lý thủ công.
 
 
 
