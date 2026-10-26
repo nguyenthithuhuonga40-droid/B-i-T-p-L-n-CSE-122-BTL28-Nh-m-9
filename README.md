@@ -17,6 +17,6 @@
   - **JavaScript (ES6):** Xử lý các sự kiện tương tác người dùng (tự động cập nhật ngày tháng động, hiển thị thông báo, cảnh báo xác nhận, tính toán và phân cặp đấu tự động)[cite: 3].
   - **FontAwesome:** Tích hợp bộ icon biểu tượng trực quan[cite: 1].
     
-- **Link Figma:** https://www.figma.com/design/qeQjdmlQ1wVmGNzIRt0Pgz/%C4%90i%E1%BB%81u-Ph%E1%BB%91i-CLB?node-id=0-1&t=uRt0vpVy4D8vsse2-1
+- **Link Figma:** https://www.figma.com/design/IHoq1xAEj6E2KSexoQwQa6/CourtConnect?node-id=3-71279&t=pxMxxW4kHf8oypIx-1
 - **Link Video:** https://youtube.com/playlist?list=PLZPW1cYm9xEk&si=wWUIPsskpG-Rs0Py
-- **Link GitHub:** https://github.com/nguyenthithuhuonga40-droid/CSE__GK_SV26_NguyenThiThuHuong_2551060626
+- **Link GitHub:** https://github.com/nguyenthithuhuonga40-droid/B-i-T-p-L-n-CSE-122-BTL28-Nh-m-9
